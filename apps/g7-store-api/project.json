@@ -1,0 +1,60 @@
+{
+  "name": "g7-store-api",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/g7-store-api/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "target": "node",
+        "compiler": "tsc",
+        "outputPath": "dist/apps/g7-store-api",
+        "main": "apps/g7-store-api/src/main.ts",
+        "tsConfig": "apps/g7-store-api/tsconfig.app.json",
+        "webpackConfig": "apps/g7-store-api/webpack.config.js",
+        "assets": ["apps/g7-store-api/src/assets"]
+      },
+      "configurations": {
+        "development": {
+          "sourceMap": true,
+          "optimization": false
+        },
+        "production": {
+          "sourceMap": false,
+          "optimization": true
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/js:node",
+      "options": {
+        "buildTarget": "g7-store-api:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "g7-store-api:build:development"
+        },
+        "production": {
+          "buildTarget": "g7-store-api:build:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "options": {
+        "lintFilePatterns": ["apps/g7-store-api/**/*.ts"],
+        "eslintConfig": "apps/g7-store-api/eslint.config.mjs"
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "options": {
+        "jestConfig": "apps/g7-store-api/jest.config.cts"
+      }
+    }
+  },
+  "tags": ["scope:backend", "domain:commerce", "type:app", "layer:api"]
+}

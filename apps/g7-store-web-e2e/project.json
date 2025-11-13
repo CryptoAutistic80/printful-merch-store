@@ -1,0 +1,27 @@
+{
+  "name": "g7-store-web-e2e",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/g7-store-web-e2e/src",
+  "projectType": "application",
+  "implicitDependencies": ["g7-store-web"],
+  "targets": {
+    "e2e": {
+      "executor": "@nx/playwright:playwright",
+      "options": {
+        "config": "apps/g7-store-web-e2e/playwright.config.ts",
+        "passWithNoTests": true,
+        "devServer": {
+          "command": "nx run g7-store-web:dev",
+          "port": 4200
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "options": {
+        "lintFilePatterns": ["apps/g7-store-web-e2e/**/*.{ts,tsx}"]
+      }
+    }
+  },
+  "tags": ["scope:frontend", "domain:commerce", "type:app", "layer:e2e"]
+}
