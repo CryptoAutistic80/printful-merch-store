@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background: radial-gradient(circle at top, #0b0d10 0%, #050608 60%);
+  color: #f5f7fa;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+}
+
+.scroll-mt-32 {
+  scroll-margin-top: 8rem;
+}

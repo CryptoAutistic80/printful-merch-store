@@ -1,0 +1,55 @@
+{
+  "name": "g7-store-web",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/g7-store-web/src",
+  "projectType": "application",
+  "targets": {
+    "dev": {
+      "executor": "@nx/next:dev-server",
+      "options": {
+        "buildTarget": "g7-store-web:build",
+        "port": 4200
+      }
+    },
+    "build": {
+      "executor": "@nx/next:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/g7-store-web"
+      }
+    },
+    "start": {
+      "executor": "@nx/next:start",
+      "options": {
+        "buildTarget": "g7-store-web:build"
+      }
+    },
+    "export": {
+      "executor": "@nx/next:export",
+      "options": {
+        "buildTarget": "g7-store-web:build"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/g7-store-web/**/*.{ts,tsx,js,jsx}"],
+        "eslintConfig": "apps/g7-store-web/eslint.config.mjs"
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "options": {
+        "jestConfig": "apps/g7-store-web/jest.config.cts"
+      }
+    },
+    "typecheck": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "tsc --project apps/g7-store-web/tsconfig.json --noEmit"
+      }
+    }
+  },
+  "tags": ["scope:frontend", "domain:commerce", "type:app", "layer:ui"]
+}
