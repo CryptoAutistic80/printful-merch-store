@@ -14,7 +14,7 @@ import { StripeService } from './service';
         if (!secret) {
           return null;
         }
-        return new Stripe(secret, { apiVersion: '2024-06-20' });
+        return new Stripe(secret, { apiVersion: '2025-10-29.clover' });
       },
     },
     StripeService,

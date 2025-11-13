@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "nx": "nx",
-    "start": "nx serve g7-store-web",
+    "start": "nx run g7-store-web:dev",
     "start:api": "nx serve g7-store-api",
     "build": "nx build g7-store-web",
     "lint": "nx lint",

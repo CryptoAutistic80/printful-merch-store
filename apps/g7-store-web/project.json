@@ -5,10 +5,11 @@
   "projectType": "application",
   "targets": {
     "dev": {
-      "executor": "@nx/next:dev-server",
+      "executor": "@nx/next:server",
       "options": {
         "buildTarget": "g7-store-web:build",
-        "port": 4200
+        "port": 4200,
+        "dev": true
       }
     },
     "build": {
