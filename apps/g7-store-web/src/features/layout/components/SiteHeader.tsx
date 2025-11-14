@@ -8,6 +8,7 @@ import { useCart } from '../../cart/hooks/useCart';
 const navItems = [
   { href: '/', label: 'Home' },
   { href: '/shop', label: 'Shop' },
+  { href: '/community', label: 'Community' },
   { href: '/category/hoodie', label: 'Drops' },
   { href: '/sophia', label: 'Sophia' },
 ];
