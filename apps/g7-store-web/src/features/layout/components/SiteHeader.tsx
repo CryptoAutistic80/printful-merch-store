@@ -9,7 +9,7 @@ const navItems = [
   { href: '/', label: 'Home' },
   { href: '/shop', label: 'Shop' },
   { href: '/category/hoodie', label: 'Drops' },
-  { href: '/about', label: 'About', disabled: true },
+  { href: '/sophia', label: 'Sophia' },
 ];
 
 export function SiteHeader() {
@@ -30,7 +30,6 @@ export function SiteHeader() {
               className={cn(
                 'text-xs font-medium uppercase tracking-[0.2em] text-white/60 transition-colors',
                 pathname === item.href && 'text-white',
-                item.disabled && 'pointer-events-none opacity-30',
               )}
             >
               {item.label}
