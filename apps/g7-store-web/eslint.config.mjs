@@ -16,6 +16,9 @@ export default [
   ...baseConfig,
   ...nx.configs['flat/react-typescript'],
   {
-    ignores: ['.next/**/*'],
+    ignores: ['.next/**/*', '../../dist/**/*'],
+    rules: {
+      '@next/next/no-html-link-for-pages': 'off',
+    },
   },
 ];

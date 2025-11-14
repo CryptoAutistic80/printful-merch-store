@@ -4,17 +4,18 @@ import { findProductBySlug, products } from '@g7/shared-products';
 import { ProductPurchasePanel } from '../../../../features/catalog/components/ProductPurchasePanel';
 
 interface Params {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export function generateStaticParams() {
   return products.map((product) => ({ slug: product.slug }));
 }
 
-export default function ProductPage({ params }: Params) {
-  const product = findProductBySlug(params.slug);
+export default async function ProductPage({ params }: Params) {
+  const { slug } = await params;
+  const product = findProductBySlug(slug);
 
   if (!product) {
     notFound();
@@ -25,7 +26,13 @@ export default function ProductPage({ params }: Params) {
       <div className="space-y-4">
         {product.images.map((image) => (
           <div key={image} className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-white/10">
-            <Image src={image} alt={product.name} fill className="object-cover" />
+            <Image
+              src={image}
+              alt={product.name}
+              fill
+              sizes="(min-width: 1024px) 60vw, 100vw"
+              className="object-cover"
+            />
           </div>
         ))}
       </div>

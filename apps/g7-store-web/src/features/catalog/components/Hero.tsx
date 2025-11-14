@@ -31,6 +31,7 @@ export function Hero() {
             alt="Hero mockup"
             fill
             sizes="(min-width: 1024px) 50vw, 90vw"
+            priority
             className="rounded-2xl object-cover"
           />
           <div className="absolute -left-6 top-10 h-24 w-24 rounded-2xl border border-white/10 bg-ink/80 p-3 text-xs text-white/70">
