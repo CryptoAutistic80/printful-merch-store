@@ -14,17 +14,15 @@ export function Hero() {
       </div>
       <div className="relative z-10 flex flex-col gap-8 md:flex-row md:items-center">
         <div className="max-w-2xl space-y-6">
-          <p className="text-xs uppercase tracking-[0.4em] text-white/60">TikTok experiment log</p>
+          <p className="text-xs uppercase tracking-[0.4em] text-white/60">Building the Group 7&apos;s Community</p>
           <div className="space-y-4">
             <h1
               className={`${glitch.className} text-[34px] leading-tight bg-gradient-to-r from-white via-[#c4b5fd] to-[#a5f3fc] bg-[length:200%_200%] bg-clip-text text-transparent animate-[textGradientShift_6s_ease_infinite] md:text-[48px]`}
             >
-              Welcome to Group 7 Supply &amp; Community Hub, bending the algorithm to our will.
+              Building a real community hub for Group 7 takes infrastructure—and your support.
             </h1>
             <p className="text-base text-white/80 md:text-lg">
-              On 17 Oct 2025 Sophia James posted seven TikToks to bully the feed. The seventh clip exploded, crowning everyone who saw it as
-              Group 7. We bottled that playful exclusivity into merch, neon rituals, and a sonic React&nbsp;Three hero scene that hums with
-              her loop-machine energy.
+              Started by Sophia James, the Group 7 movement is growing into something bigger. To build a true community hub—with platforms, events, and spaces where the Group 7&apos;s can connect—we need infrastructure and resources. Every piece of Group 7 attire and accessory you purchase directly funds this vision, helping us create a unique community brand as &quot;the Group 7&apos;s&quot; while building something greater together.
             </p>
           </div>
           <div className="flex flex-wrap gap-3 pt-2">
@@ -32,7 +30,7 @@ export function Hero() {
               href="/shop"
               className="inline-flex items-center justify-center rounded-full border border-accent/60 bg-accent px-6 py-3 text-xs font-semibold uppercase tracking-[0.35em] text-white shadow-accent/40 transition hover:-translate-y-0.5"
             >
-              Shop the Group 7 drop
+              Support the Hub
             </Link>
             <Link
               href="/sophia"
@@ -48,16 +46,13 @@ export function Hero() {
           </div>
         </div>
         <div className="relative mt-8 flex w-full items-center justify-center rounded-[2rem] border border-white/10 bg-gradient-to-b from-white/10 to-transparent p-6 md:mt-0 md:h-[420px] md:flex-1">
-          <div className="absolute inset-x-0 top-6 flex justify-center text-[0.55rem] uppercase tracking-[0.6em] text-white/20">
-            Group·7·Group·7·Group·7
-          </div>
           <div className="relative h-full w-full max-w-lg overflow-hidden rounded-[1.5rem] border border-white/5 bg-black/70 p-6 shadow-[0_20px_60px_rgba(0,0,0,0.45)]">
             <Image
               src="/logos/group-7.png"
               alt="Group 7 monogram"
               fill
               sizes="(min-width: 1024px) 24rem, 80vw"
-              className="object-cover scale-[1.08]"
+              className="object-cover scale-[0.85] rounded-[1rem]"
               priority
             />
           </div>

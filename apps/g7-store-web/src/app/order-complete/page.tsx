@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export const metadata = { title: 'Order complete — Group 7 Supply' };
+export const metadata = { title: 'Order complete — Group 7 Life' };
 
 export default function OrderCompletePage() {
   return (

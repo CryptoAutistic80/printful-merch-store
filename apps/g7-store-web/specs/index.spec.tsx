@@ -5,6 +5,6 @@ import { Hero } from '../src/features/catalog/components/Hero';
 describe('Hero', () => {
   it('renders heading text', () => {
     const { getByText } = render(<Hero />);
-    expect(getByText(/Group 7 Supply/i)).toBeTruthy();
+    expect(getByText(/Group 7 Life/i)).toBeTruthy();
   });
 });

@@ -1,7 +1,7 @@
 import { CartSummary } from '../../features/cart/components/CartSummary';
 import Link from 'next/link';
 
-export const metadata = { title: 'Cart — Group 7 Supply' };
+export const metadata = { title: 'Cart — Group 7 Life' };
 
 export default function CartPage() {
   return (

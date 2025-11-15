@@ -20,7 +20,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 border-b border-white/5 bg-ink/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
         <Link href="/" className="font-mono text-xs uppercase tracking-[0.4em] text-white/70">
-          G7 SUPPLY
+          G7 LIFE
         </Link>
         <nav className="hidden gap-6 md:flex">
           {navItems.map((item) => (

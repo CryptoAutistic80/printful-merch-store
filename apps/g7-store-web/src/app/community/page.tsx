@@ -13,7 +13,7 @@ const promises = [
 ];
 
 export const metadata: Metadata = {
-  title: 'Community — Group 7 Supply',
+  title: 'Community — Group 7 Life',
   description: 'A neon, no-frills coming soon page for the Group 7 community drop.',
 };
 
@@ -31,7 +31,7 @@ export default function CommunityPage() {
         </div>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-4 md:justify-start">
           <Link
-            href="mailto:community@group7.supply"
+            href="mailto:singularityshiftai@gmail.com"
             className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 text-xs uppercase tracking-[0.3em] text-white transition hover:border-white/60"
           >
             Join the waitlist
@@ -51,7 +51,7 @@ export default function CommunityPage() {
         ))}
         <article className="rounded-3xl border border-dashed border-white/20 bg-black/40 p-6 text-center md:col-span-2">
           <p className="text-xs uppercase tracking-[0.35em] text-white/60">Need to talk sooner?</p>
-          <h3 className="mt-3 text-3xl font-semibold text-white">community@group7.supply</h3>
+          <h3 className="mt-3 text-3xl font-semibold text-white">singularityshiftai@gmail.com</h3>
           <p className="mt-2 text-sm text-white/70">
             Send your TikTok handle, ideas, or orientation scripts—we&apos;ll fold the best ones into the build.
           </p>

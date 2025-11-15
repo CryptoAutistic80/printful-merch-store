@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 
 const AMAZON_TRACK_URL =
   'https://music.amazon.co.uk/albums/B0FQKTPM57?trackAsin=B0FQKV46N3&ref=dm_sh_658e-9d3a-1414-13dc-17dfa';
@@ -10,25 +10,6 @@ const AMAZON_SAMPLE_PROXY =
 
 export function MusicPlayer() {
   const audioRef = useRef<HTMLAudioElement>(null);
-
-  useEffect(() => {
-    const audio = audioRef.current;
-    if (!audio) {
-      return;
-    }
-
-    const tryPlay = async () => {
-      try {
-        await audio.play();
-      } catch {
-        // Browsers often block autoplay with sound, which is fine—the player stays interactive.
-      }
-    };
-
-    if (audio.paused) {
-      void tryPlay();
-    }
-  }, []);
 
   return (
     <section className="rounded-[2.5rem] border border-white/5 bg-gradient-to-br from-[#06000f] via-[#07021c] to-[#020108] px-6 py-10 md:px-12">
@@ -69,7 +50,6 @@ export function MusicPlayer() {
             src={AMAZON_SAMPLE_PROXY}
             controls
             loop
-            autoPlay
             preload="auto"
             className="w-full rounded-2xl border border-white/10 bg-black/60 p-3 text-white"
           >

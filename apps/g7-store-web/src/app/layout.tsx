@@ -9,7 +9,7 @@ const display = Space_Grotesk({ subsets: ['latin'], weight: ['400', '500', '600'
 const mono = IBM_Plex_Mono({ subsets: ['latin'], weight: ['400', '500'], variable: '--font-mono' });
 
 export const metadata: Metadata = {
-  title: 'Group 7 Supply',
+  title: 'Group 7 Life',
   description: 'Printful-powered merch stack built with Nx, Next.js, and Nest.',
 };
 

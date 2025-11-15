@@ -3,9 +3,9 @@ import { SophiaJourney } from '../../features/music/components/SophiaJourney';
 import { MusicPlayer } from '../../features/music/components/MusicPlayer';
 
 export const metadata: Metadata = {
-  title: 'Sophia — Group 7 Supply',
+  title: 'Sophia — Group 7 Life',
   description:
-    'Unofficial Group 7 Supply fan dossier highlighting Sophia James as the origin of the collective. All merch is original Group 7 art made to champion her music.',
+    'Unofficial Group 7 Life fan dossier highlighting Sophia James as the origin of the collective. All merch is original Group 7 art made to champion her music.',
 };
 
 const auroraTexture =
@@ -53,7 +53,7 @@ export default function SophiaPage() {
             </div>
           </div>
           <p className="text-xs text-white/50">
-            Group 7 Supply is not affiliated with Sophia, American Idol, or any label. She’s featured solely because she
+            Group 7 Life is not affiliated with Sophia, American Idol, or any label. She’s featured solely because she
             founded the experiment, and the merch you see is entirely our community’s creation.
           </p>
         </div>
@@ -89,7 +89,7 @@ export default function SophiaPage() {
             <div className="rounded-3xl border border-white/10 bg-black/40 p-6 text-white/80">
               <p className="text-xs uppercase tracking-[0.35em] text-white/60">Unofficial status</p>
               <p className="text-lg">
-                Group 7 Supply is a community-operated fan effort. We don’t speak for Sophia, and we don’t reproduce her
+                Group 7 Life is a community-operated fan effort. We don’t speak for Sophia, and we don’t reproduce her
                 handwriting, lyrics, or art. We simply channel her origin story into our own Group 7 motifs.
               </p>
             </div>
