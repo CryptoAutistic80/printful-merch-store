@@ -1,14 +1,14 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
-const promises = [
+const notes = [
   {
     title: 'Orientation HQ is simmering',
-    copy: 'We are prototyping a comment wall, duet surface, and badge board that mirrors how Group 7 plays on TikTok—bold, chaotic, welcoming.',
+    copy: 'We are sketching what the next Group 7 gathering place feels like—slow, caring, and free from algorithms.',
   },
   {
     title: 'No filler updates',
-    copy: 'Expect one concise email when the experience is ready plus optional invites to IRL pop-ups like the Antelope pub pilot.',
+    copy: 'You will only hear from us when there is something we can invite you into. Until then, consider this page a quiet beacon.',
   },
 ];
 
@@ -31,8 +31,8 @@ export default function CommunityPage() {
           <p className="text-xs uppercase tracking-[0.35em] text-white/65">Coming soon</p>
           <h1 className="text-4xl font-semibold text-white md:text-5xl">Orientation HQ is almost here</h1>
           <p className="text-base text-white/80 md:text-lg">
-            Think cosmic comment wall meets merch concierge. We just aren&apos;t shipping it until the playful exclusivity feels perfect. Until
-            then, this page holds space for the hype.
+            Think of this as a holding pattern for something gentler than social feeds. We&apos;re moving slowly on purpose so the vibe stays
+            intimate, loving, and offline-friendly. Until it&apos;s ready, we&apos;re simply keeping the porch light on.
           </p>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-4 md:justify-start">
             <Link
@@ -54,13 +54,13 @@ export default function CommunityPage() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_80%,rgba(47,199,187,0.08),transparent_55%)]" />
         </div>
         <div className="relative z-10 grid gap-6 md:grid-cols-2">
-          {promises.map((promise) => (
+          {notes.map((note) => (
             <article
-              key={promise.title}
+              key={note.title}
               className="rounded-[2rem] border border-white/15 bg-gradient-to-br from-white/15 via-white/5 to-transparent p-6 shadow-[0_20px_45px_rgba(1,1,21,0.55)]"
             >
-              <h2 className="text-2xl font-semibold text-white">{promise.title}</h2>
-              <p className="pt-3 text-sm text-white/70">{promise.copy}</p>
+              <h2 className="text-2xl font-semibold text-white">{note.title}</h2>
+              <p className="pt-3 text-sm text-white/70">{note.copy}</p>
             </article>
           ))}
           <article className="rounded-[2rem] border border-dashed border-white/20 bg-black/40 p-6 text-center md:col-span-2">
