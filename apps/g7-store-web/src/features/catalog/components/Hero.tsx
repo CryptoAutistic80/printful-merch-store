@@ -19,7 +19,7 @@ export function Hero() {
             <h1
               className={`${glitch.className} text-[34px] leading-tight bg-gradient-to-r from-white via-[#c4b5fd] to-[#a5f3fc] bg-[length:200%_200%] bg-clip-text text-transparent animate-[textGradientShift_6s_ease_infinite] md:text-[48px]`}
             >
-              Building a real community hub for Group 7 takes infrastructure—and your support.
+              Welcome to group 7 life - building the foundations
             </h1>
             <p className="text-base text-white/80 md:text-lg">
               Started by Sophia James, the Group 7 movement is growing into something bigger. To build a true community hub—with platforms, events, and spaces where the Group 7&apos;s can connect—we need infrastructure and resources. Every piece of Group 7 attire and accessory you purchase directly funds this vision, helping us create a unique community brand as &quot;the Group 7&apos;s&quot; while building something greater together.
