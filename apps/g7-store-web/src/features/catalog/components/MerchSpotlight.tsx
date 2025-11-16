@@ -7,7 +7,7 @@ const featuredProducts = getFeaturedProducts(3);
 
 export function MerchSpotlight() {
   return (
-    <section className="space-y-8 rounded-[2.5rem] border border-white/5 bg-gradient-to-br from-[#06030d] via-[#090320] to-[#05030c] p-8 md:p-12">
+    <section className="soft-panel space-y-8 rounded-[2.5rem] border border-white/5 bg-gradient-to-br from-[#06030d] via-[#090320] to-[#05030c] p-8 md:p-12">
       <div className="space-y-3">
         <p className="text-xs uppercase tracking-[0.35em] text-white/50">Orientation kit</p>
         <h2 className="text-3xl font-semibold text-white">Printful-ready merch spotlight</h2>

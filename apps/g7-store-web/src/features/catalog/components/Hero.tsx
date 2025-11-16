@@ -6,18 +6,21 @@ const glitch = Rubik_Glitch({ subsets: ['latin'], weight: '400' });
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden rounded-[2.75rem] border border-white/5 bg-gradient-to-br from-[#060417] via-[#070019] to-[#020205] px-6 py-14 md:px-12">
+    <section className="relative overflow-hidden rounded-[2.75rem] border border-white/10 bg-gradient-to-br from-[#201B4B]/95 via-[#151032]/95 to-[#05030E]/95 px-6 py-14 shadow-[0_25px_80px_rgba(6,2,23,0.6)] md:px-12">
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.12),_transparent_45%)]" />
-        <div className="absolute -left-20 top-16 h-72 w-72 rounded-full bg-[#d946ef]/20 blur-3xl" />
-        <div className="absolute bottom-10 right-10 h-72 w-72 rounded-full bg-[#0ea5e9]/20 blur-3xl" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(47,199,187,0.15),_transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,_rgba(248,131,121,0.12),_transparent_70%)]" />
+        <div className="absolute -right-32 top-12 h-72 w-72 rounded-full bg-[#EBD0E3]/15 blur-[120px]" />
+        <div className="absolute -left-40 bottom-0 h-96 w-96 rounded-full bg-[#2FC7BB]/15 blur-[140px]" />
+        <div className="absolute left-1/2 top-1/3 h-[420px] w-[420px] -translate-x-1/2 rounded-full border border-white/5 opacity-40 blur-3xl" />
+        <div className="absolute left-16 top-10 h-28 w-28 rounded-full border border-white/20 opacity-40 blur-xl" />
       </div>
       <div className="relative z-10 flex flex-col gap-8 md:flex-row md:items-center">
         <div className="max-w-2xl space-y-6">
-          <p className="text-xs uppercase tracking-[0.4em] text-white/60">Building the Group 7&apos;s Community</p>
+          <p className="text-xs uppercase tracking-[0.4em] text-white/65">Building the Group 7&apos;s Community</p>
           <div className="space-y-4">
             <h1
-              className={`${glitch.className} text-[34px] leading-tight bg-gradient-to-r from-white via-[#c4b5fd] to-[#a5f3fc] bg-[length:200%_200%] bg-clip-text text-transparent animate-[textGradientShift_6s_ease_infinite] md:text-[48px]`}
+              className={`${glitch.className} text-[34px] leading-tight bg-gradient-to-r from-[#F3EEFF] via-[#D9C6EA] to-[#99EFE4] bg-[length:200%_200%] bg-clip-text text-transparent animate-[textGradientShift_6s_ease_infinite] md:text-[48px]`}
             >
               Welcome to group 7 life - building the foundations
             </h1>
@@ -45,16 +48,27 @@ export function Hero() {
             <span>Printful-ready</span>
           </div>
         </div>
-        <div className="relative mt-8 flex w-full items-center justify-center rounded-[2rem] border border-white/10 bg-gradient-to-b from-white/10 to-transparent p-6 md:mt-0 md:h-[420px] md:flex-1">
-          <div className="relative h-full w-full max-w-lg overflow-hidden rounded-[1.5rem] border border-white/5 bg-black/70 p-6 shadow-[0_20px_60px_rgba(0,0,0,0.45)]">
-            <Image
-              src="/logos/group-7.png"
-              alt="Group 7 monogram"
-              fill
-              sizes="(min-width: 1024px) 24rem, 80vw"
-              className="object-cover scale-[0.85] rounded-[1rem]"
-              priority
-            />
+        <div className="relative mt-8 flex w-full items-center justify-center rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/10 via-transparent to-black/40 p-6 backdrop-blur md:mt-0 md:h-[400px] md:flex-1">
+          <div className="pointer-events-none absolute -top-10 right-6 h-32 w-32 rounded-full bg-[#F88379]/25 blur-[90px]" />
+          <div className="pointer-events-none absolute -bottom-12 left-0 h-36 w-36 rounded-full bg-[#2FC7BB]/25 blur-[110px]" />
+          <div className="relative flex h-full w-full max-w-lg items-center justify-center rounded-[1.5rem] border border-white/20 bg-[#070513]/70 p-6 shadow-[0_30px_80px_rgba(1,0,20,0.7)]">
+            <div className="absolute inset-0 rounded-[1.5rem] border border-white/10 opacity-60" />
+            <div className="absolute inset-4 rounded-[1.25rem] border border-white/5 opacity-20" />
+            <div className="relative flex h-64 w-64 items-center justify-center rounded-full bg-gradient-to-br from-[#2FC7BB]/20 via-transparent to-[#F88379]/20 p-2">
+              <div className="absolute inset-6 rounded-full border border-white/25 opacity-60 blur-lg" />
+              <div className="relative h-full w-full overflow-hidden rounded-full border border-white/15 bg-black/70 shadow-[0_15px_45px_rgba(3,0,22,0.6)]">
+                <Image
+                  src="/logos/group-7-solo.png"
+                  alt="Group 7 emblem"
+                  fill
+                  sizes="(min-width: 1024px) 16rem, 60vw"
+                  className="object-cover"
+                  priority
+                />
+              </div>
+            </div>
+            <div className="absolute left-12 top-10 h-12 w-12 rounded-full border border-white/20 opacity-60 blur-lg" />
+            <div className="absolute right-14 bottom-10 h-16 w-16 rounded-full border border-white/20 opacity-40 blur-2xl" />
           </div>
         </div>
       </div>

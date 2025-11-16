@@ -19,43 +19,58 @@ export const metadata: Metadata = {
 
 export default function CommunityPage() {
   return (
-    <div className="space-y-10">
-      <section className="rounded-[3rem] border border-white/10 bg-gradient-to-br from-[#050316] via-[#07011c] to-[#020107] p-10 text-center md:text-left">
-        <p className="text-xs uppercase tracking-[0.35em] text-white/60">Coming soon</p>
-        <div className="mt-6 space-y-5">
+    <div className="relative space-y-12 pb-12">
+
+      <section className="soft-panel rounded-[3rem] border border-white/10 bg-gradient-to-br from-[#1B1740]/90 via-[#151132]/95 to-[#080614]/95 p-10 text-center shadow-[0_25px_80px_rgba(2,3,31,0.55)] backdrop-blur-2xl md:text-left">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(47,199,187,0.25),_transparent_55%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,_rgba(248,131,121,0.12),_transparent_60%)]" />
+          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.03),transparent_60%)]" />
+        </div>
+        <div className="relative z-10 space-y-5">
+          <p className="text-xs uppercase tracking-[0.35em] text-white/65">Coming soon</p>
           <h1 className="text-4xl font-semibold text-white md:text-5xl">Orientation HQ is almost here</h1>
           <p className="text-base text-white/80 md:text-lg">
             Think cosmic comment wall meets merch concierge. We just aren&apos;t shipping it until the playful exclusivity feels perfect. Until
             then, this page holds space for the hype.
           </p>
-        </div>
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-4 md:justify-start">
-          <Link
-            href="mailto:singularityshiftai@gmail.com"
-            className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 text-xs uppercase tracking-[0.3em] text-white transition hover:border-white/60"
-          >
-            Join the waitlist
-          </Link>
-          <span className="rounded-full border border-dashed border-white/20 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-white/70">
-            Private beta
-          </span>
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-4 md:justify-start">
+            <Link
+              href="mailto:singularityshiftai@gmail.com"
+              className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 text-xs uppercase tracking-[0.3em] text-white transition hover:border-white/60"
+            >
+              Join the waitlist
+            </Link>
+            <span className="rounded-full border border-dashed border-white/20 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-white/70">
+              Private beta
+            </span>
+          </div>
         </div>
       </section>
 
-      <section className="grid gap-6 md:grid-cols-2">
-        {promises.map((promise) => (
-          <article key={promise.title} className="rounded-3xl border border-white/10 bg-white/5 p-6">
-            <h2 className="text-2xl font-semibold text-white">{promise.title}</h2>
-            <p className="pt-3 text-sm text-white/70">{promise.copy}</p>
+      <section className="soft-panel rounded-[3rem] border border-white/10 bg-gradient-to-br from-[#0B051E]/90 via-[#060314]/95 to-[#04000C]/95 p-8 shadow-[0_20px_70px_rgba(1,1,21,0.55)] backdrop-blur-2xl">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_10%_10%,rgba(235,208,227,0.12),transparent_45%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_80%,rgba(47,199,187,0.08),transparent_55%)]" />
+        </div>
+        <div className="relative z-10 grid gap-6 md:grid-cols-2">
+          {promises.map((promise) => (
+            <article
+              key={promise.title}
+              className="rounded-[2rem] border border-white/15 bg-gradient-to-br from-white/15 via-white/5 to-transparent p-6 shadow-[0_20px_45px_rgba(1,1,21,0.55)]"
+            >
+              <h2 className="text-2xl font-semibold text-white">{promise.title}</h2>
+              <p className="pt-3 text-sm text-white/70">{promise.copy}</p>
+            </article>
+          ))}
+          <article className="rounded-[2rem] border border-dashed border-white/20 bg-black/40 p-6 text-center md:col-span-2">
+            <p className="text-xs uppercase tracking-[0.35em] text-white/60">Need to talk sooner?</p>
+            <h3 className="mt-3 text-3xl font-semibold text-white">singularityshiftai@gmail.com</h3>
+            <p className="mt-2 text-sm text-white/70">
+              Send your TikTok handle, ideas, or orientation scripts—we&apos;ll fold the best ones into the build.
+            </p>
           </article>
-        ))}
-        <article className="rounded-3xl border border-dashed border-white/20 bg-black/40 p-6 text-center md:col-span-2">
-          <p className="text-xs uppercase tracking-[0.35em] text-white/60">Need to talk sooner?</p>
-          <h3 className="mt-3 text-3xl font-semibold text-white">singularityshiftai@gmail.com</h3>
-          <p className="mt-2 text-sm text-white/70">
-            Send your TikTok handle, ideas, or orientation scripts—we&apos;ll fold the best ones into the build.
-          </p>
-        </article>
+        </div>
       </section>
     </div>
   );
