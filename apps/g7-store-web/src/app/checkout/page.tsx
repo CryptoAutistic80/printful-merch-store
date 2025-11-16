@@ -1,7 +1,7 @@
 import { CheckoutForm } from '../../features/checkout/components/CheckoutForm';
 import { CartSummary } from '../../features/cart/components/CartSummary';
 
-export const metadata = { title: 'Checkout — Group 7 Supply' };
+export const metadata = { title: 'Checkout — Group 7 Life' };
 
 export default function CheckoutPage() {
   return (

@@ -1,4 +1,4 @@
-# Group 7 Supply
+# Group 7 Life
 
 A dual-app Nx workspace featuring a Next.js storefront (`g7-store-web`) and a Nest-powered API (`g7-store-api`). Shared
 TypeScript libs (`libs/shared-*`) keep the product catalogue, DTOs, and config contracts aligned between both sides.

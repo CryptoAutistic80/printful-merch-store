@@ -8,8 +8,9 @@ import { useCart } from '../../cart/hooks/useCart';
 const navItems = [
   { href: '/', label: 'Home' },
   { href: '/shop', label: 'Shop' },
-  { href: '/category/hoodie', label: 'Drops' },
-  { href: '/about', label: 'About', disabled: true },
+  { href: '/community', label: 'Community' },
+  { href: '/mission', label: 'Mission' },
+  { href: '/sophia', label: 'Sophia' },
 ];
 
 export function SiteHeader() {
@@ -20,7 +21,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 border-b border-white/5 bg-ink/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
         <Link href="/" className="font-mono text-xs uppercase tracking-[0.4em] text-white/70">
-          G7 SUPPLY
+          G7 LIFE
         </Link>
         <nav className="hidden gap-6 md:flex">
           {navItems.map((item) => (
@@ -30,7 +31,6 @@ export function SiteHeader() {
               className={cn(
                 'text-xs font-medium uppercase tracking-[0.2em] text-white/60 transition-colors',
                 pathname === item.href && 'text-white',
-                item.disabled && 'pointer-events-none opacity-30',
               )}
             >
               {item.label}
