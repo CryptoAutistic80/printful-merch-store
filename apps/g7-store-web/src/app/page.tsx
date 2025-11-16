@@ -8,25 +8,25 @@ const whyWeBuild = [
     step: '01',
     title: 'Digital platforms',
     description:
-      `Building community spaces requires robust platforms—comment walls, event hubs, creator collaboration tools. Every purchase funds the infrastructure that lets Group 7's connect and create together.`,
+      `We’re architecting a home feed that actually feels like home—mod tools, comment walls, and creation spaces designed to break the echo chambers. Merch fuel keeps the servers humming so connection stays human.`,
   },
   {
     step: '02',
     title: 'Real-world events',
     description:
-      'From meetups to showcases, bringing the Group 7\'s together offline takes venues, logistics, and resources. Merch sales directly enable these gatherings where the community comes alive.',
+      'Community needs real hugs and high-fives. Sales cover venues, logistics, and storytelling so the Group 7 fam can gather offline and remember what belonging feels like.',
   },
   {
     step: '03',
     title: 'Community resources',
     description:
-      'Supporting creators, amplifying voices, and building the "Group 7\'s" brand identity requires ongoing investment. Your purchases power the tools and resources that make this movement sustainable.',
+      'We’re building creator stipends, support channels, and learning resources that amplify voices the algorithm ignores. Each order turns into tools that let people be heard and held.',
   },
   {
     step: '04',
     title: 'Sustainable growth',
     description:
-      `A real community hub isn't built overnight. It needs consistent infrastructure, maintenance, and evolution. Every piece of Group 7 merch you buy is an investment in building something greater—together.`,
+      `Platforms built on ads compromise people. Merch revenue keeps Group 7 autonomous so we can grow slowly, intentionally, and always in service of the humans wearing it.`,
   },
 ];
 
@@ -35,25 +35,25 @@ const theVision = [
     era: 'Platform infrastructure',
     quote: 'Digital spaces for connection',
     description:
-      'Building comment walls, creator collaboration tools, and event hubs requires ongoing platform development and maintenance. Your merch purchases directly fund these digital spaces where Group 7\'s can connect.',
+      'Custom feeds, safe discussion rooms, and collaboration studios don’t appear by magic. Merch keeps devs shipping features that make people feel seen instead of sorted.',
   },
   {
     era: 'Event production',
     quote: 'Real-world community gatherings',
     description:
-      'From local meetups to larger showcases, bringing the community together offline requires venues, logistics, and production resources. Every sale enables more opportunities for Group 7\'s to gather.',
+      'We’re planning pop-up houses and creator residencies so the internet fam can meet IRL. Every hoodie powers the logistics that get us together.',
   },
   {
     era: 'Brand building',
     quote: 'The "Group 7\'s" identity',
     description:
-      'Creating a unique community brand takes consistent investment in design, content, and storytelling. Your support helps build the "Group 7\'s" identity that makes this movement recognizable and meaningful.',
+      'This isn’t another drop—it’s a flag to rally around. Supporting the brand tells the world there’s appetite for kinder tech, and funds the design systems that shape that identity.',
   },
   {
     era: 'Sustainable funding',
     quote: 'Merch enables the vision',
     description:
-      'A viable community hub needs sustainable revenue streams. Group 7 attire and accessories aren\'t just products—they\'re the mechanism that funds infrastructure, events, and resources for building something greater.',
+      'Ad dollars demand attention, not care. Merch lets us say no to surveillance incentives and yes to building a platform that answers to its people.',
   },
 ];
 
@@ -72,8 +72,8 @@ export default function Index() {
       <section className="rounded-[2.25rem] border border-white/5 bg-gradient-to-br from-[#070112] via-[#04071c] to-[#080114] p-8">
         <div className="mb-8 flex flex-col gap-2">
           <p className="text-xs uppercase tracking-[0.35em] text-white/50">Why We&apos;re Building</p>
-          <h2 className="font-display text-3xl font-semibold text-white">Every purchase funds community infrastructure</h2>
-          <p className="text-sm text-white/70 md:text-base">Building a real community hub for Group 7 requires infrastructure, resources, and sustainable funding. Here&apos;s how your support makes it happen.</p>
+          <h2 className="font-display text-3xl font-semibold text-white">Every purchase builds the internet we want to hang out in</h2>
+          <p className="text-sm text-white/70 md:text-base">Group 7 is for people who crave connection over clicks. When you gear up, that energy turns into engineers, creators, and ops teams crafting an alternative to algorithmic isolation.</p>
         </div>
         <div className="grid gap-6 md:grid-cols-2">
           {whyWeBuild.map((step) => (
@@ -89,9 +89,9 @@ export default function Index() {
       <section className="space-y-8 rounded-[2.5rem] border border-white/5 bg-gradient-to-br from-[#04021a] via-[#050123] to-[#010009] p-8 md:p-12">
         <header className="space-y-3">
           <p className="text-xs uppercase tracking-[0.35em] text-white/50">The Vision</p>
-          <h2 className="text-3xl font-semibold text-white">How merch sales fund community building</h2>
+          <h2 className="text-3xl font-semibold text-white">Merch is the runway for our people-first platform</h2>
           <p className="text-base text-white/70">
-            Building a real community hub requires infrastructure, resources, and sustainable funding. Here&apos;s how your purchases directly contribute to making the Group 7&apos;s vision a reality.
+            We&apos;re launching a social layer where care beats clicks. Instead of raising from investors who would optimize for ads, we&apos;re choosing you. Here&apos;s what your wardrobe is funding.
           </p>
         </header>
         <ol className="grid gap-6 md:grid-cols-2">
@@ -108,9 +108,9 @@ export default function Index() {
       <section className="rounded-[2rem] border border-white/5 bg-gradient-to-br from-[#05001b] via-[#02000e] to-[#010005] px-6 py-8 md:px-12">
         <div className="flex flex-col gap-2 pb-6">
           <p className="text-xs uppercase tracking-[0.35em] text-white/50">Infrastructure Partners</p>
-          <h2 className="text-2xl font-semibold text-white">Building the community hub together</h2>
+          <h2 className="text-2xl font-semibold text-white">Building the human internet takes a crew</h2>
           <p className="text-sm text-white/70">
-            These partners enable the infrastructure that makes the Group 7 community hub possible—from platform development to sustainable operations.
+            These partners keep quality high while we focus on mission—ethical production, intentional commerce, and creative strategy that honors the people wearing the merch.
           </p>
         </div>
         <div className="grid gap-4 md:grid-cols-3">
@@ -134,9 +134,9 @@ export default function Index() {
       <section className="rounded-[2.5rem] border border-dashed border-white/15 bg-black/30 p-8 md:p-12">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-xs uppercase tracking-[0.35em] text-white/60">Community Hub</p>
-          <h2 className="mt-3 text-3xl font-semibold text-white">Your purchases fund the infrastructure we&apos;re building</h2>
+          <h2 className="mt-3 text-3xl font-semibold text-white">Let&apos;s prove the internet can feel loving again</h2>
           <p className="mt-4 text-base text-white/70 md:text-lg">
-            Every Group 7 item you buy directly contributes to building a real community hub—platforms for connection, event spaces for gathering, and resources for creators. We&apos;re shaping comment walls, collaboration tools, and offline meetups that bring the Group 7&apos;s together. Your support makes this vision possible.
+            If you&apos;re tired of being reduced to a data point, wear the resistance. Every Group 7 item is a vote for social platforms that protect nuance, invite care, and still feel electric. The faster we sell out, the faster we can launch the features, meetups, and creator funds that flip the script on what social media can be.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Link

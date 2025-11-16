@@ -22,7 +22,7 @@ export function Hero() {
               Welcome to group 7 life - building the foundations
             </h1>
             <p className="text-base text-white/80 md:text-lg">
-              Started by Sophia James, the Group 7 movement is growing into something bigger. To build a true community hub—with platforms, events, and spaces where the Group 7&apos;s can connect—we need infrastructure and resources. Every piece of Group 7 attire and accessory you purchase directly funds this vision, helping us create a unique community brand as &quot;the Group 7&apos;s&quot; while building something greater together.
+              Everywhere online we hear the same thing: people are done being pushed into algorithmic echo chambers. They crave something different—spaces that feel human, connective, loving. That&apos;s why every piece of Group 7 merch matters. Each tee, hoodie, or sticker is fuel for a social media future built on real community infrastructure, not clicks. If you believe in launching a platform that treats people like people, this is how you help build it.
             </p>
           </div>
           <div className="flex flex-wrap gap-3 pt-2">
