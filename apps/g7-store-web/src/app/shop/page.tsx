@@ -90,6 +90,41 @@ export default function ShopPage() {
         </div>
       </section>
 
+      <section id="catalog" className="soft-panel space-y-6 rounded-[3rem] border border-white/10 bg-gradient-to-br from-[#06030d] via-[#090320] to-[#05030c] p-8 shadow-[0_25px_70px_rgba(2,0,25,0.6)] backdrop-blur-2xl md:p-12">
+        <header className="space-y-3 text-white">
+          <p className="text-xs uppercase tracking-[0.35em] text-white/60">Live catalog</p>
+          <h2 className="text-3xl font-semibold">Spring powers every drop</h2>
+          <p className="text-sm text-white/70">
+            Browse the live Spring carousel right here, then click through to complete your purchase on the Group Seven Life store. Inventory, pricing,
+            and fulfillment all sync straight from our Spring dashboard so what you see is what ships.
+          </p>
+        </header>
+        <div className="overflow-hidden rounded-[2.5rem] border border-white/15 bg-black/40 shadow-[0_22px_70px_rgba(3,0,18,0.55)]">
+          <iframe
+            title="Spring storefront embed"
+            src="https://embed.creator-spring.com/widget?slug=my-store-10d5eaa&per=20&currency=&page=1&layout=carousel-wide&theme=dark"
+            style={{ borderRadius: '24px', border: 'none', width: '100%', height: '420px' }}
+            allow="clipboard-write; encrypted-media"
+          />
+        </div>
+        <div className="flex flex-wrap gap-4 text-white">
+          <Link
+            href="https://store.groupseven.life"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center justify-center rounded-full bg-[#2FC7BB] px-6 py-3 text-xs font-semibold uppercase tracking-[0.35em] text-[#041218] shadow-[0_15px_40px_rgba(47,199,187,0.45)] transition hover:-translate-y-0.5"
+          >
+            Open the Group Seven Life store
+          </Link>
+          <Link
+            href="/community"
+            className="inline-flex items-center justify-center rounded-full border border-white/30 px-6 py-3 text-xs uppercase tracking-[0.35em] text-white transition hover:border-white/60"
+          >
+            Request a product drop
+          </Link>
+        </div>
+      </section>
+
       <section className="soft-panel rounded-[3rem] border border-white/10 bg-gradient-to-br from-[#130826]/95 via-[#09051A]/95 to-[#04000B]/97 p-8 shadow-[0_25px_80px_rgba(3,0,20,0.65)] backdrop-blur-2xl md:p-12">
         <div className="grid gap-8 md:grid-cols-2">
           <div className="space-y-4 text-white">
@@ -124,41 +159,6 @@ export default function ShopPage() {
               Tell us what to build next
             </Link>
           </div>
-        </div>
-      </section>
-
-      <section id="catalog" className="soft-panel space-y-6 rounded-[3rem] border border-white/10 bg-gradient-to-br from-[#06030d] via-[#090320] to-[#05030c] p-8 shadow-[0_25px_70px_rgba(2,0,25,0.6)] backdrop-blur-2xl md:p-12">
-        <header className="space-y-3 text-white">
-          <p className="text-xs uppercase tracking-[0.35em] text-white/60">Live catalog</p>
-          <h2 className="text-3xl font-semibold">Spring powers every drop</h2>
-          <p className="text-sm text-white/70">
-            Browse the live Spring carousel right here, then click through to complete your purchase on the Group Seven Life store. Inventory, pricing,
-            and fulfillment all sync straight from our Spring dashboard so what you see is what ships.
-          </p>
-        </header>
-        <div className="overflow-hidden rounded-[2.5rem] border border-white/15 bg-black/40 shadow-[0_22px_70px_rgba(3,0,18,0.55)]">
-          <iframe
-            title="Spring storefront embed"
-            src="https://embed.creator-spring.com/widget?slug=my-store-10d5eaa&per=20&currency=&page=1&layout=carousel-wide&theme=dark"
-            style={{ borderRadius: '24px', border: 'none', width: '100%', height: '420px' }}
-            allow="clipboard-write; encrypted-media"
-          />
-        </div>
-        <div className="flex flex-wrap gap-4 text-white">
-          <Link
-            href="https://store.groupseven.life"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center justify-center rounded-full bg-[#2FC7BB] px-6 py-3 text-xs font-semibold uppercase tracking-[0.35em] text-[#041218] shadow-[0_15px_40px_rgba(47,199,187,0.45)] transition hover:-translate-y-0.5"
-          >
-            Open the Group Seven Life store
-          </Link>
-          <Link
-            href="/community"
-            className="inline-flex items-center justify-center rounded-full border border-white/30 px-6 py-3 text-xs uppercase tracking-[0.35em] text-white transition hover:border-white/60"
-          >
-            Request a product drop
-          </Link>
         </div>
       </section>
     </div>

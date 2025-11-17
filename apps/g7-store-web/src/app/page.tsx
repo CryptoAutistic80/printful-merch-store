@@ -112,7 +112,6 @@ export default function Index() {
           </div>
         </div>
       </section>
-      <MusicPlayer />
 
       <section className="soft-panel rounded-[3rem] border border-white/10 bg-gradient-to-br from-[#1B1740]/90 via-[#1C2541]/90 to-[#09071A]/95 p-8 shadow-[0_25px_80px_rgba(2,3,31,0.55)] backdrop-blur-2xl md:p-12">
         <div className="absolute inset-0">
@@ -217,6 +216,9 @@ export default function Index() {
           ))}
         </div>
       </section>
+
+      <MusicPlayer />
+
       <section className="soft-panel rounded-[3rem] border border-white/15 bg-gradient-to-br from-[#201c44]/95 via-[#09061C]/97 to-[#05000D]/97 p-8 text-center shadow-[0_30px_80px_rgba(3,0,20,0.75)] backdrop-blur-2xl md:p-14">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[conic-gradient(from_120deg,_rgba(47,199,187,0.05),_rgba(248,131,121,0.08),_transparent_60%)]" />
