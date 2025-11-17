@@ -13,6 +13,24 @@ npm start        # runs Next on http://localhost:4200
 
 Both apps watch the shared libs, so updating `libs/shared-types` or `libs/shared-products` immediately updates the API and UI.
 
+## Starting and stopping the dev server
+
+**Start:**
+```bash
+npm start        # starts Next.js on http://localhost:4200
+```
+
+**Stop:**
+- Press `Ctrl+C` in the terminal where it's running
+- Or kill the process: `pkill -f "nx run g7-store-web:dev"`
+
+**If you get "Waiting for g7-store-web:dev in another nx process":**
+```bash
+npx nx daemon --stop
+pkill -f "nx run g7-store-web:dev"
+npm start
+```
+
 ## Environment variables
 
 Create a `.env.local` (frontend) and `.env` (backend) or copy the samples below. Everything funnels through `libs/config` so
