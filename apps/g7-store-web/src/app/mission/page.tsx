@@ -4,7 +4,7 @@ const pillars = [
   {
     label: 'Care-first infrastructure',
     description:
-      'We reinvest every cart into building tools that mend the internet: human-moderated feeds, conversation rooms with context, and surprise meetups that feel like family reunions.',
+      'Spring checkout revenue fuels the tools that mend the internet: human-moderated feeds, conversation rooms with context, and surprise meetups that feel like family reunions.',
   },
   {
     label: 'Grassroots funding loop',

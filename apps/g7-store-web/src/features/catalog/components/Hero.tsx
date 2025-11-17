@@ -45,7 +45,7 @@ export function Hero() {
           <div className="flex flex-wrap gap-6 pt-4 text-xs uppercase tracking-[0.4em] text-white/50">
             <span>Neon cosmic</span>
             <span>Inclusive elite</span>
-            <span>Printful-ready</span>
+            <span>Spring-hosted</span>
           </div>
         </div>
         <div className="relative mt-8 flex w-full items-center justify-center rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/10 via-transparent to-black/40 p-6 backdrop-blur md:mt-0 md:h-[400px] md:flex-1">

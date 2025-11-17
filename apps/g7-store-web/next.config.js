@@ -22,6 +22,7 @@ const nextConfig = {
   env: {
     NEXT_PUBLIC_API_BASE_URL:
       process.env.NEXT_PUBLIC_API_BASE_URL ?? process.env.API_BASE_URL ?? 'http://localhost:3333/api',
+    NEXT_PUBLIC_STORE_URL: process.env.NEXT_PUBLIC_STORE_URL ?? process.env.STORE_URL ?? 'https://store.groupseven.life',
   },
   nx: {},
 };

@@ -59,8 +59,18 @@ const theVision = [
 
 const infrastructurePartners = [
   { name: 'Singularity Shift Ltd', tag: 'Creative studio + ops', description: 'Building the community hub vision through strategy, storytelling, and platform design that connects Group 7\'s.', initials: 'SS' },
-  { name: 'Printful', tag: 'Production + fulfilment', description: 'Enabling sustainable merch operations so every purchase efficiently funds community infrastructure.', initials: 'P' },
-  { name: 'Stripe', tag: 'Commerce backbone', description: 'Powering seamless transactions that convert community support into resources for building the hub.', initials: 'S' },
+  {
+    name: 'Spring (Teespring)',
+    tag: 'Storefront + fulfillment',
+    description: 'Hosting the external store at store.groupseven.life so payments stay smooth while we focus the backend on community.',
+    initials: 'SP',
+  },
+  {
+    name: 'Group 7 Backend',
+    tag: 'Community services',
+    description: 'Our Nest API now powers the hub experience only, while all sales and payment processing flow through Spring.',
+    initials: 'G7',
+  },
 ];
 
 export default function Index() {
