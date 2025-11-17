@@ -12,13 +12,15 @@ const siteUrl = 'https://groupseven.life';
 const siteName = 'Group 7 Life';
 const siteTitle = `${siteName} — Community merch fueling the Group Seven Life collective`;
 const siteDescription =
-  'Group 7 Life is a Printful-powered merch collective funding kinder digital spaces, in-person gatherings, and creator resources for the Group Seven Life community.';
+  'Group 7 Life is the TikTok-fueled Group 7 trend made real—a community merch collective funding kinder digital spaces, in-person gatherings, and creator resources.';
 const gaMeasurementId = 'G-G1J9F131CF';
 const siteKeywords = [
   'Group 7 Life',
   'Group Seven Life',
   'community merch',
-  'Printful storefront',
+  'community storefront',
+  'Group 7 TikTok trend',
+  'Group 7 viral merch',
   'creator collective',
   'Spring shop',
   'kinder tech',

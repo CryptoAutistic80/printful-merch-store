@@ -59,7 +59,7 @@ export function Hero() {
               <div className="absolute inset-6 rounded-full border border-white/25 opacity-60 blur-lg" />
               <div className="relative h-full w-full overflow-hidden rounded-full border border-white/15 bg-black/70 shadow-[0_15px_45px_rgba(3,0,22,0.6)]">
                 <Image
-                  src="/logos/group-7-solo.png"
+                  src="/logos/7-circle.png"
                   alt="Group 7 emblem"
                   fill
                   sizes="(min-width: 1024px) 16rem, 60vw"
