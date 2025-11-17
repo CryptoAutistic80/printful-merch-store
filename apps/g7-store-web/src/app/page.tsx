@@ -78,6 +78,41 @@ export default function Index() {
     <div className="relative space-y-16 pb-16">
 
       <Hero />
+
+      <section className="soft-panel relative overflow-hidden rounded-[2.75rem] border border-white/10 bg-gradient-to-br from-[#0B051E]/90 via-[#0C0A24]/90 to-[#090314]/95 px-6 py-10 shadow-[0_22px_70px_rgba(3,0,18,0.65)] backdrop-blur-2xl md:px-12">
+        <div className="pointer-events-none absolute inset-0">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_20%,rgba(47,199,187,0.12),transparent_55%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(248,131,121,0.12),transparent_55%)]" />
+          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.04),transparent_60%)]" />
+        </div>
+        <div className="relative z-10 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+          <div className="max-w-2xl space-y-3 text-white">
+            <p className="text-xs uppercase tracking-[0.4em] text-white/70">Spring Storefront</p>
+            <h2 className="text-[28px] font-semibold leading-tight md:text-[34px]">
+              Shop the Group 7 collection at store.groupseven.life
+            </h2>
+            <p className="text-sm text-white/70 md:text-base">
+              All purchases now flow through our Spring-hosted store. Browse the shop page to preview the carousel, then complete your order securely on store.groupseven.life while we keep building the community hub.
+            </p>
+          </div>
+          <div className="flex flex-col gap-3 md:min-w-[320px] md:text-right">
+            <Link
+              href="/shop"
+              className="inline-flex items-center justify-center rounded-full bg-[#2FC7BB] px-6 py-3 text-xs font-semibold uppercase tracking-[0.35em] text-[#041218] shadow-[0_15px_40px_rgba(47,199,187,0.45)] transition hover:-translate-y-0.5"
+            >
+              Preview the Shop Page
+            </Link>
+            <a
+              href="https://store.groupseven.life"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center justify-center rounded-full border border-white/30 px-6 py-3 text-xs uppercase tracking-[0.35em] text-white transition hover:border-white/60"
+            >
+              Open store.groupseven.life
+            </a>
+          </div>
+        </div>
+      </section>
       <MusicPlayer />
 
       <section className="soft-panel rounded-[3rem] border border-white/10 bg-gradient-to-br from-[#1B1740]/90 via-[#1C2541]/90 to-[#09071A]/95 p-8 shadow-[0_25px_80px_rgba(2,3,31,0.55)] backdrop-blur-2xl md:p-12">
@@ -201,7 +236,7 @@ export default function Index() {
               href="/shop"
               className="inline-flex items-center justify-center rounded-full bg-[#2FC7BB] px-8 py-3 text-xs font-semibold uppercase tracking-[0.45em] text-[#041218] shadow-[0_15px_40px_rgba(47,199,187,0.45)] transition hover:-translate-y-0.5"
             >
-              Shop to Support
+              Shop the Spring Store
             </Link>
             <Link
               href="/community"
