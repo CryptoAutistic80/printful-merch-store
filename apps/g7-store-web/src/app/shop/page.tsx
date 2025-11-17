@@ -12,8 +12,8 @@ const reasons = [
     detail: 'All payments and fulfillment now run through our Spring (Teespring) storefront so you can check out instantly.',
   },
   {
-    title: 'Backend powers community',
-    detail: 'Nest stays online for the community hub, creator programs, and member tools—commerce lives off-site.',
+    title: 'One consistent experience',
+    detail: 'You get the same catalog whether you use the embed or open the store—no more juggling platforms.',
   },
   {
     title: 'One link to rule it all',
@@ -23,7 +23,7 @@ const reasons = [
 
 const commitments = [
   'Every purchase funds moderators, creators, and residencies instead of ad impressions.',
-  'Spring’s rails keep payments secure so we can focus on building softer, human-centered rooms.',
+  'Spring keeps payments secure while we focus on stories, music, and the community hub.',
   'The embed below always reflects the latest catalog—no more syncing print files or variant IDs in the app.',
 ];
 
@@ -35,8 +35,8 @@ export default function ShopPage() {
           <p className="text-xs uppercase tracking-[0.35em] text-white/70">Merch is the mission</p>
           <h1 className="text-4xl font-semibold leading-tight md:text-5xl">Spring is now the home for every Group 7 drop</h1>
           <p className="text-base text-white/80 md:text-lg">
-            We’re rerouting all sales to Spring (Teespring) so fulfillment, payments, and tax handling stay fast while we pour our
-            backend energy into the community hub. The story and roadmap live here; the cart lives at store.groupseven.life.
+            We’re rerouting all sales to Spring (Teespring) so fulfillment, payments, and tax handling stay fast. The story and
+            roadmap live here; the cart lives at store.groupseven.life.
           </p>
           <p className="text-base text-white/70">
             Opening the store in a new tab ensures the embed or storefront is always up to date. If you want to help shape the
@@ -112,8 +112,8 @@ export default function ShopPage() {
             <p className="text-xs uppercase tracking-[0.35em] text-white/70">Commitments</p>
             <h2 className="text-3xl font-semibold">How the new flow supports the mission</h2>
             <p className="text-sm text-white/70 md:text-base">
-              The backend now focuses on the community layer, while Spring handles the entire transaction loop. It keeps us nimble
-              and transparent while you still get fast shipping.
+              Spring runs checkout and fulfillment so we can keep shaping stories, music, and community tools. You still get fast
+              shipping while we focus on the experience.
             </p>
             <div className="space-y-4">
               {commitments.map((line) => (

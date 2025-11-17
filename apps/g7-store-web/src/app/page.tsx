@@ -62,13 +62,13 @@ const infrastructurePartners = [
   {
     name: 'Spring (Teespring)',
     tag: 'Storefront + fulfillment',
-    description: 'Hosting the external store at store.groupseven.life so payments stay smooth while we focus the backend on community.',
+    description: 'Hosting the external store at store.groupseven.life so payments stay smooth and merch ships quickly.',
     initials: 'SP',
   },
   {
-    name: 'Group 7 Backend',
-    tag: 'Community services',
-    description: 'Our Nest API now powers the hub experience only, while all sales and payment processing flow through Spring.',
+    name: 'Group 7 Community',
+    tag: 'Stories + hub',
+    description: 'Home for music, updates, and the community hub that rallies everyone wearing the merch.',
     initials: 'G7',
   },
 ];
@@ -92,7 +92,7 @@ export default function Index() {
               Shop the Group 7 collection at store.groupseven.life
             </h2>
             <p className="text-sm text-white/70 md:text-base">
-              All purchases now flow through our Spring-hosted store. Browse the shop page to preview the carousel, then complete your order securely on store.groupseven.life while we keep building the community hub.
+              All purchases now flow through our Spring-hosted store. Browse the shop page to preview the carousel, then complete your order securely on store.groupseven.life.
             </p>
           </div>
           <div className="flex flex-col gap-3 md:min-w-[320px] md:text-right">
