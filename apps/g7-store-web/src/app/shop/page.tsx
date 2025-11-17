@@ -1,39 +1,39 @@
 import Link from 'next/link';
-import { products } from '@g7/shared-products';
-import { ProductGrid } from '../../features/catalog/components/ProductGrid';
-import { CategoryNav } from '../../features/catalog/components/CategoryNav';
 
 const capsules = [
   {
-    title: 'Orientation kit',
-    description: 'Signature tee + hoodie + cap so you can wear the flag while we finish the digital HQ.',
+    title: 'Live Spring carousel',
+    description: 'Scroll the embedded widget to preview tees, hoodies, and accessories without leaving the community hub.',
     href: '/shop#catalog',
-    tag: 'Featured capsule',
+    tag: 'Live preview',
   },
   {
-    title: 'Cosmic basics',
-    description: 'Daily uniforms for people who want softer feeds, slower rooms, and community-led events.',
-    href: '/category/tee',
-    tag: 'Tees & hoodies',
+    title: 'One tap checkout',
+    description: 'When a product hits, pop over to the Group Seven Life store to check out via Spring with tracked shipping.',
+    href: 'https://store.groupseven.life',
+    tag: 'Secure payments',
   },
   {
-    title: 'Signal boosters',
-    description: 'Accessories that spread the story IRL and bankroll the creator stipends keeping Group 7 alive.',
-    href: '/category/accessory',
-    tag: 'Accessories',
+    title: 'Drop requests',
+    description: 'Tell us what to spin up next and we can push new products to the Spring dashboard in hours.',
+    href: '/community',
+    tag: 'Community drops',
   },
 ];
 
 const fundingLoops = [
   { title: 'Merch equals membership', detail: 'Every checkout says “I want kinder tech” louder than any algorithm could.' },
-  { title: 'Inventory stays agile', detail: 'Printful sync lets us ship fast while we reinvest profits into human-moderated spaces.' },
-  { title: 'Transparency by default', detail: 'We publish drop data in libs/shared-products so anyone can track what powers the build.' },
+  { title: 'Inventory stays agile', detail: 'Spring handles the printing and shipping so we can keep iterating on the experience and community ops.' },
+  { title: 'Transparency by default', detail: 'The Spring dashboard feeds real-time insight into what funds the build, so we can reinvest in moderators, devs, and shows.' },
 ];
 
 const rallyStatements = [
   'Sophia sparked the signal; we keep it resonating.',
   'Grassroots merch beats ad-funded surveillance.',
   'Wearable protest is still protest.',
+  'Shipping kindness at scale takes all of us.',
+  'Carousels are cooler when they fund community care.',
+  'If it doesn’t build belonging, it doesn’t ship.',
 ];
 
 export const metadata = {
@@ -90,14 +90,49 @@ export default function ShopPage() {
         </div>
       </section>
 
+      <section id="catalog" className="soft-panel space-y-6 rounded-[3rem] border border-white/10 bg-gradient-to-br from-[#06030d] via-[#090320] to-[#05030c] p-8 shadow-[0_25px_70px_rgba(2,0,25,0.6)] backdrop-blur-2xl md:p-12">
+        <header className="space-y-3 text-white">
+          <p className="text-xs uppercase tracking-[0.35em] text-white/60">Live catalog</p>
+          <h2 className="text-3xl font-semibold">Spring powers every drop</h2>
+          <p className="text-sm text-white/70">
+            Browse the live Spring carousel right here, then click through to complete your purchase on the Group Seven Life store. Inventory, pricing,
+            and fulfillment all sync straight from our Spring dashboard so what you see is what ships.
+          </p>
+        </header>
+        <div className="overflow-hidden rounded-[2.5rem] border border-white/15 bg-black/40 shadow-[0_22px_70px_rgba(3,0,18,0.55)]">
+          <iframe
+            title="Spring storefront embed"
+            src="https://embed.creator-spring.com/widget?slug=my-store-10d5eaa&per=20&currency=&page=1&layout=carousel-wide&theme=dark"
+            style={{ borderRadius: '24px', border: 'none', width: '100%', height: '420px' }}
+            allow="clipboard-write; encrypted-media"
+          />
+        </div>
+        <div className="flex flex-wrap gap-4 text-white">
+          <Link
+            href="https://store.groupseven.life"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center justify-center rounded-full bg-[#2FC7BB] px-6 py-3 text-xs font-semibold uppercase tracking-[0.35em] text-[#041218] shadow-[0_15px_40px_rgba(47,199,187,0.45)] transition hover:-translate-y-0.5"
+          >
+            Open the Group Seven Life store
+          </Link>
+          <Link
+            href="/community"
+            className="inline-flex items-center justify-center rounded-full border border-white/30 px-6 py-3 text-xs uppercase tracking-[0.35em] text-white transition hover:border-white/60"
+          >
+            Request a product drop
+          </Link>
+        </div>
+      </section>
+
       <section className="soft-panel rounded-[3rem] border border-white/10 bg-gradient-to-br from-[#130826]/95 via-[#09051A]/95 to-[#04000B]/97 p-8 shadow-[0_25px_80px_rgba(3,0,20,0.65)] backdrop-blur-2xl md:p-12">
         <div className="grid gap-8 md:grid-cols-2">
           <div className="space-y-4 text-white">
             <p className="text-xs uppercase tracking-[0.35em] text-white/70">Why this store matters</p>
             <h2 className="text-3xl font-semibold">Every collection powers people, not clicks</h2>
             <p className="text-sm text-white/70 md:text-base">
-              Because the catalog lives in a shared Printful library, we can swap colors, sizing, and SKU mixes instantly. That elasticity is
-              how we keep the lights on for community ops without outside investors.
+              Because the carousel pulls straight from Spring, we can swap colors, sizing, and SKU mixes instantly. That elasticity is how we
+              keep the lights on for community ops without outside investors.
             </p>
             <div className="space-y-4">
               {fundingLoops.map((loop) => (
@@ -125,19 +160,6 @@ export default function ShopPage() {
             </Link>
           </div>
         </div>
-      </section>
-
-      <section id="catalog" className="soft-panel space-y-6 rounded-[3rem] border border-white/10 bg-gradient-to-br from-[#06030d] via-[#090320] to-[#05030c] p-8 shadow-[0_25px_70px_rgba(2,0,25,0.6)] backdrop-blur-2xl md:p-12">
-        <header className="space-y-3 text-white">
-          <p className="text-xs uppercase tracking-[0.35em] text-white/60">Live catalog</p>
-          <h2 className="text-3xl font-semibold">Every product keeps the lights on</h2>
-          <p className="text-sm text-white/70">
-            The data lives in <code className="rounded bg-black/40 px-2 py-0.5 text-white/80">libs/shared-products</code>, so editing one entry immediately
-            refreshes the storefront, fulfillment, and ops. That tight loop is how grassroots funding scales care.
-          </p>
-        </header>
-        <CategoryNav />
-        <ProductGrid products={products} />
       </section>
     </div>
   );
