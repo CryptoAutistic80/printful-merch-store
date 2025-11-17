@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+      - NODE_ENV=production
+      - NEXT_TELEMETRY_DISABLED=1
+      - NEXT_PUBLIC_TIKTOK_VIDEO_ID=7562061800192183583
+      - NEXT_PUBLIC_TIKTOK_VIDEO_URL=https://www.tiktok.com/@sophiajamesmusic/video/7473661663745658142
+    restart: unless-stopped
+

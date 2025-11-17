@@ -60,3 +60,22 @@ nx serve g7-store-api  # run the Nest API with live reload
 ```
 
 CI can use `nx affected -t lint,test,build,typecheck` to enforce module boundaries (scope tags are already wired up).
+
+## Frontend container (Cloud Run)
+
+The Next.js storefront can be built as a standalone container via `Dockerfile.frontend`. The TikTok embed env values are
+baked into the image so Cloud Run only needs the runtime port.
+
+```bash
+# build locally (or npm run docker:build:frontend)
+docker build -f Dockerfile.frontend -t g7-store-web:local .
+
+# run locally (or npm run docker:run:frontend)
+docker run --rm -p 8080:8080 g7-store-web:local
+
+# push the same image for Cloud Run once ready
+docker tag g7-store-web:local gcr.io/<project>/g7-store-web:latest
+docker push gcr.io/<project>/g7-store-web:latest
+```
+
+Cloud Run automatically injects `PORT`; the container listens on 8080 by default and runs `next start dist/apps/g7-store-web`.

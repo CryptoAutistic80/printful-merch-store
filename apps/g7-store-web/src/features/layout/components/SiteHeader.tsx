@@ -74,7 +74,7 @@ export function SiteHeader() {
             const isExternal = item.href.startsWith('http');
             return (
               <Link
-                key={item.key ?? item.href}
+                key={'key' in item ? item.key : item.href}
                 href={item.href}
                 target={isExternal ? '_blank' : undefined}
                 rel={isExternal ? 'noreferrer' : undefined}

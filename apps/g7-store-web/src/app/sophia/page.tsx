@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import Script from 'next/script';
 import { MusicPlayer } from '../../features/music/components/MusicPlayer';
 
 const auroraTexture =
@@ -120,6 +121,10 @@ const socialLinks = [
   { label: 'Substack', href: 'https://sophiajames.substack.com', description: 'Essays, behind-the-scenes stories, and warm dispatches about crafting songs.' },
   { label: 'Shopify merch', href: 'https://sophiajamesmusic.myshopify.com', description: 'Her official store—support it whenever you can.' },
 ];
+
+const tiktokVideoId = process.env.NEXT_PUBLIC_TIKTOK_VIDEO_ID ?? '7306404809639286062';
+const tiktokVideoUrl =
+  process.env.NEXT_PUBLIC_TIKTOK_VIDEO_URL ?? `https://www.tiktok.com/@sophiajamesmusic/video/${tiktokVideoId}`;
 
 export const metadata: Metadata = {
   title: 'Sophia — Group 7 Life',
@@ -283,24 +288,22 @@ export default function SophiaPage() {
             </div>
           </div>
           <div className="rounded-[2.5rem] border border-white/10 bg-black/30 p-6 text-white">
-            <p className="text-xs uppercase tracking-[0.4em] text-white/60">TikTok embed instructions</p>
-            <p className="pt-3 text-sm text-white/80">
-              Swap in the Group 7 video ID (the long number at the end of the URL) to embed the exact post that launched the movement.
-            </p>
-            <pre className="mt-4 overflow-x-auto rounded-2xl bg-black/70 p-4 text-xs text-white/80">
-{`<blockquote class="tiktok-embed"
-  cite="https://www.tiktok.com/@sophiajamesmusic/video/XXXXXXXXX"
-  data-video-id="XXXXXXXXX"
-  style="max-width:605px;min-width:325px;">
-  <section>
-    <a target="_blank" title="@sophiajamesmusic"
-       href="https://www.tiktok.com/@sophiajamesmusic">
-      @sophiajamesmusic
-    </a>
-  </section>
-</blockquote>
-<script async src="https://www.tiktok.com/embed.js"></script>`}
-            </pre>
+            <p className="text-xs uppercase tracking-[0.4em] text-white/60">TikTok embed</p>
+            <div className="mt-6 rounded-2xl border border-white/10 bg-black/60 p-4">
+              <blockquote
+                className="tiktok-embed"
+                cite={tiktokVideoUrl}
+                data-video-id={tiktokVideoId}
+                style={{ maxWidth: 605, minWidth: 325 }}
+              >
+                <section>
+                  <a target="_blank" rel="noreferrer" title="@sophiajamesmusic" href="https://www.tiktok.com/@sophiajamesmusic">
+                    @sophiajamesmusic
+                  </a>
+                </section>
+              </blockquote>
+            </div>
+            <Script src="https://www.tiktok.com/embed.js" strategy="lazyOnload" />
           </div>
         </div>
       </section>

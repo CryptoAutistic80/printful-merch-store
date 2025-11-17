@@ -1,0 +1,30 @@
+FROM node:20-alpine AS base
+RUN apk add --no-cache libc6-compat
+WORKDIR /app
+
+FROM base AS deps
+COPY package.json package-lock.json ./
+RUN npm ci
+
+FROM base AS builder
+WORKDIR /app
+ENV NEXT_PUBLIC_TIKTOK_VIDEO_ID=7562061800192183583 \
+    NEXT_PUBLIC_TIKTOK_VIDEO_URL=https://www.tiktok.com/@sophiajamesmusic/video/7473661663745658142
+COPY . .
+RUN rm -rf apps/g7-store-web/.next
+COPY --from=deps /app/node_modules ./node_modules
+RUN npm run build
+
+FROM base AS runner
+WORKDIR /app
+ENV NODE_ENV=production \
+    NEXT_TELEMETRY_DISABLED=1 \
+    NEXT_PUBLIC_TIKTOK_VIDEO_ID=7562061800192183583 \
+    NEXT_PUBLIC_TIKTOK_VIDEO_URL=https://www.tiktok.com/@sophiajamesmusic/video/7473661663745658142 \
+    PORT=8080
+COPY package.json package-lock.json ./
+RUN npm ci --omit=dev
+COPY --from=builder /app/dist/apps/g7-store-web ./dist/apps/g7-store-web
+COPY --from=builder /app/apps/g7-store-web/public ./dist/apps/g7-store-web/public
+EXPOSE 8080
+CMD npx next start dist/apps/g7-store-web --hostname 0.0.0.0 --port ${PORT:-8080}

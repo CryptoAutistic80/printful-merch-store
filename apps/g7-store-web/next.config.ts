@@ -1,8 +1,7 @@
-//@ts-check
+import { composePlugins, withNx } from '@nx/next';
+import type { NextConfig } from 'next';
 
-const { composePlugins, withNx } = require('@nx/next');
-
-const nextConfig = {
+const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
@@ -28,4 +27,5 @@ const nextConfig = {
 
 const plugins = [withNx];
 
-module.exports = composePlugins(...plugins)(nextConfig);
+export default composePlugins(...plugins)(nextConfig);
+
