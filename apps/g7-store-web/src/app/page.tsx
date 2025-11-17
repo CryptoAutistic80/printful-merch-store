@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { Hero } from '../features/catalog/components/Hero';
-import { MerchSpotlight } from '../features/catalog/components/MerchSpotlight';
 import { MusicPlayer } from '../features/music/components/MusicPlayer';
 
 const whyWeBuild = [
@@ -59,8 +58,18 @@ const theVision = [
 
 const infrastructurePartners = [
   { name: 'Singularity Shift Ltd', tag: 'Creative studio + ops', description: 'Building the community hub vision through strategy, storytelling, and platform design that connects Group 7\'s.', initials: 'SS' },
-  { name: 'Printful', tag: 'Production + fulfilment', description: 'Enabling sustainable merch operations so every purchase efficiently funds community infrastructure.', initials: 'P' },
-  { name: 'Stripe', tag: 'Commerce backbone', description: 'Powering seamless transactions that convert community support into resources for building the hub.', initials: 'S' },
+  {
+    name: 'Spring (Teespring)',
+    tag: 'Storefront + fulfillment',
+    description: 'Hosting the external shop on the Group Seven Life store so payments stay smooth and merch ships quickly.',
+    initials: 'SP',
+  },
+  {
+    name: 'Group 7 Community',
+    tag: 'Stories + hub',
+    description: 'Home for music, updates, and the community hub that rallies everyone wearing the merch.',
+    initials: 'G7',
+  },
 ];
 
 export default function Index() {
@@ -68,7 +77,41 @@ export default function Index() {
     <div className="relative space-y-16 pb-16">
 
       <Hero />
-      <MusicPlayer />
+
+      <section className="soft-panel relative overflow-hidden rounded-[2.75rem] border border-white/10 bg-gradient-to-br from-[#0B051E]/90 via-[#0C0A24]/90 to-[#090314]/95 px-6 py-10 shadow-[0_22px_70px_rgba(3,0,18,0.65)] backdrop-blur-2xl md:px-12">
+        <div className="pointer-events-none absolute inset-0">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_20%,rgba(47,199,187,0.12),transparent_55%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(248,131,121,0.12),transparent_55%)]" />
+          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.04),transparent_60%)]" />
+        </div>
+        <div className="relative z-10 flex flex-col gap-6 text-white md:flex-row md:items-center md:justify-between">
+          <div className="space-y-4 md:max-w-2xl">
+            <p className="text-xs uppercase tracking-[0.4em] text-white/70">Spring Storefront</p>
+            <h2 className="text-[28px] font-semibold leading-tight md:text-[34px]">
+              Refill your closet at the Group Seven Life store
+            </h2>
+            <p className="text-sm text-white/70 md:text-base">
+              Browse every drop through the dedicated shop page, then head over to our Spring-powered storefront for checkout, fulfillment, and shipping updates.
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-4 md:justify-end">
+            <Link
+              href="/shop"
+              className="inline-flex items-center justify-center rounded-full bg-[#2FC7BB] px-6 py-3 text-xs font-semibold uppercase tracking-[0.35em] text-[#041218] shadow-[0_15px_40px_rgba(47,199,187,0.45)] transition hover:-translate-y-0.5"
+            >
+              Preview the shop page
+            </Link>
+            <a
+              href="https://store.groupseven.life"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center justify-center rounded-full border border-white/30 px-6 py-3 text-xs uppercase tracking-[0.35em] text-white transition hover:border-white/60"
+            >
+              Shop the Group Seven Life store
+            </a>
+          </div>
+        </div>
+      </section>
 
       <section className="soft-panel rounded-[3rem] border border-white/10 bg-gradient-to-br from-[#1B1740]/90 via-[#1C2541]/90 to-[#09071A]/95 p-8 shadow-[0_25px_80px_rgba(2,3,31,0.55)] backdrop-blur-2xl md:p-12">
         <div className="absolute inset-0">
@@ -174,7 +217,7 @@ export default function Index() {
         </div>
       </section>
 
-      <MerchSpotlight />
+      <MusicPlayer />
 
       <section className="soft-panel rounded-[3rem] border border-white/15 bg-gradient-to-br from-[#201c44]/95 via-[#09061C]/97 to-[#05000D]/97 p-8 text-center shadow-[0_30px_80px_rgba(3,0,20,0.75)] backdrop-blur-2xl md:p-14">
         <div className="absolute inset-0">
@@ -191,7 +234,7 @@ export default function Index() {
               href="/shop"
               className="inline-flex items-center justify-center rounded-full bg-[#2FC7BB] px-8 py-3 text-xs font-semibold uppercase tracking-[0.45em] text-[#041218] shadow-[0_15px_40px_rgba(47,199,187,0.45)] transition hover:-translate-y-0.5"
             >
-              Shop to Support
+              Shop the Spring Store
             </Link>
             <Link
               href="/community"

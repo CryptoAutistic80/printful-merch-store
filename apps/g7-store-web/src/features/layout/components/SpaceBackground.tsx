@@ -146,7 +146,8 @@ function FloatingOrbs() {
   );
 
   useFrame((state) => {
-    if (!meshRef.current) return;
+    const mesh = meshRef.current;
+    if (!mesh) return;
     const t = state.clock.elapsedTime;
     orbs.forEach((orb, index) => {
       const angle = t * orb.speed + orb.offset;
@@ -157,13 +158,13 @@ function FloatingOrbs() {
       const scale = orb.scale * (1 + Math.sin(t * 0.5 + orb.offset) * 0.3);
       dummy.scale.setScalar(scale);
       dummy.updateMatrix();
-      meshRef.current.setMatrixAt(index, dummy.matrix);
+      mesh.setMatrixAt(index, dummy.matrix);
       const color = new THREE.Color('#2FC7BB').lerp(new THREE.Color('#EBD0E3'), orb.colorShift).multiplyScalar(0.85);
-      meshRef.current.setColorAt(index, color);
+      mesh.setColorAt(index, color);
     });
-    meshRef.current.instanceMatrix.needsUpdate = true;
-    if (meshRef.current.instanceColor) {
-      meshRef.current.instanceColor.needsUpdate = true;
+    mesh.instanceMatrix.needsUpdate = true;
+    if (mesh.instanceColor) {
+      mesh.instanceColor.needsUpdate = true;
     }
   });
 
