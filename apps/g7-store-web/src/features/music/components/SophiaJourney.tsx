@@ -35,7 +35,7 @@ const timeline = [
     period: 'Now — Nx stack & Protocol showroom',
     headline: 'Her experiments sparked our unofficial merch lab—the rest is community folklore.',
     story:
-      'We watched Sophia blend music narrative with tech prototypes, so we mirrored the approach with Nx, Next.js, and a Spring-hosted store. She keeps the “elite but welcoming” mantra alive; we keep the merch table stocked in her honor.',
+      'We watched Sophia blend music narrative with tech prototypes, so we mirrored the approach with Nx, Next.js, and Printful drops. She keeps the “elite but welcoming” mantra alive; we keep the merch table stocked in her honor.',
     quote: '“This experiment lets me dream at neon scale without losing the handwritten lyric texture.”',
     gradient: 'linear-gradient(135deg, #d75bff 0%, #6f6bff 50%, #090918 100%)',
   },

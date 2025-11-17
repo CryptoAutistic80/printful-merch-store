@@ -1,31 +1,44 @@
 import Link from 'next/link';
 
+const capsules = [
+  {
+    title: 'Live Spring carousel',
+    description: 'Scroll the embedded widget to preview tees, hoodies, and accessories without leaving the community hub.',
+    href: '/shop#catalog',
+    tag: 'Live preview',
+  },
+  {
+    title: 'One tap checkout',
+    description: 'When a product hits, pop over to the Group Seven Life store to check out via Spring with tracked shipping.',
+    href: 'https://store.groupseven.life',
+    tag: 'Secure payments',
+  },
+  {
+    title: 'Drop requests',
+    description: 'Tell us what to spin up next and we can push new products to the Spring dashboard in hours.',
+    href: '/community',
+    tag: 'Community drops',
+  },
+];
+
+const fundingLoops = [
+  { title: 'Merch equals membership', detail: 'Every checkout says “I want kinder tech” louder than any algorithm could.' },
+  { title: 'Inventory stays agile', detail: 'Spring handles the printing and shipping so we can keep iterating on the experience and community ops.' },
+  { title: 'Transparency by default', detail: 'The Spring dashboard feeds real-time insight into what funds the build, so we can reinvest in moderators, devs, and shows.' },
+];
+
+const rallyStatements = [
+  'Sophia sparked the signal; we keep it resonating.',
+  'Grassroots merch beats ad-funded surveillance.',
+  'Wearable protest is still protest.',
+  'Shipping kindness at scale takes all of us.',
+  'Carousels are cooler when they fund community care.',
+  'If it doesn’t build belonging, it doesn’t ship.',
+];
+
 export const metadata = {
   title: 'Shop — Group 7 Life',
 };
-
-const storeUrl = process.env.NEXT_PUBLIC_STORE_URL ?? 'https://store.groupseven.life';
-
-const reasons = [
-  {
-    title: 'Spring handles checkout',
-    detail: 'All payments and fulfillment now run through our Spring (Teespring) storefront so you can check out instantly.',
-  },
-  {
-    title: 'One consistent experience',
-    detail: 'You get the same catalog whether you use the embed or open the store—no more juggling platforms.',
-  },
-  {
-    title: 'One link to rule it all',
-    detail: 'store.groupseven.life is the single destination for merch drops, while this site tells the story and rallies support.',
-  },
-];
-
-const commitments = [
-  'Every purchase funds moderators, creators, and residencies instead of ad impressions.',
-  'Spring keeps payments secure while we focus on stories, music, and the community hub.',
-  'The embed below always reflects the latest catalog—no more syncing print files or variant IDs in the app.',
-];
 
 export default function ShopPage() {
   return (
@@ -33,29 +46,28 @@ export default function ShopPage() {
       <section className="soft-panel rounded-[3rem] border border-white/10 bg-gradient-to-br from-[#1B1740]/90 via-[#151132]/95 to-[#080614]/95 p-8 shadow-[0_30px_80px_rgba(2,3,31,0.55)] backdrop-blur-2xl md:p-12">
         <div className="space-y-6 text-white">
           <p className="text-xs uppercase tracking-[0.35em] text-white/70">Merch is the mission</p>
-          <h1 className="text-4xl font-semibold leading-tight md:text-5xl">Spring is now the home for every Group 7 drop</h1>
+          <h1 className="text-4xl font-semibold leading-tight md:text-5xl">Wear the proof that we&apos;re building a human internet</h1>
           <p className="text-base text-white/80 md:text-lg">
-            We’re rerouting all sales to Spring (Teespring) so fulfillment, payments, and tax handling stay fast. The story and
-            roadmap live here; the cart lives at store.groupseven.life.
+            Everywhere online we hear the same thing: people are done being pushed into algorithmic echo chambers. They crave something
+            different—spaces that feel human, connective, loving. That&apos;s why every piece of Group 7 merch matters. Each tee, hoodie, or sticker
+            is fuel for a social media future built on real community infrastructure, not clicks.
           </p>
           <p className="text-base text-white/70">
-            Opening the store in a new tab ensures the embed or storefront is always up to date. If you want to help shape the
-            hub, hop back here after checkout and tell us what to build next.
+            When you check out, you&apos;re not buying swag—you&apos;re co-funding engineers, moderators, and pop-up houses. It&apos;s the cleanest way to
+            say you believe in launching a platform that treats people like people.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link
-              href={storeUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-[#2FC7BB] px-8 py-3 text-xs font-semibold uppercase tracking-[0.4em] text-[#041218] shadow-[0_18px_45px_rgba(47,199,187,0.45)] transition hover:-translate-y-0.5"
-            >
-              Open Spring store
-            </Link>
-            <Link
-              href="#spring-embed"
+              href="/mission"
               className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 text-xs uppercase tracking-[0.3em] text-white/80 transition hover:border-white/60"
             >
-              View embed below
+              Read the manifesto
+            </Link>
+            <Link
+              href="#catalog"
+              className="inline-flex items-center justify-center rounded-full bg-[#2FC7BB] px-8 py-3 text-xs font-semibold uppercase tracking-[0.4em] text-[#041218] shadow-[0_18px_45px_rgba(47,199,187,0.45)] transition hover:-translate-y-0.5"
+            >
+              Browse drops
             </Link>
           </div>
         </div>
@@ -63,72 +75,47 @@ export default function ShopPage() {
 
       <section className="soft-panel rounded-[3rem] border border-white/10 bg-gradient-to-br from-[#0B051E]/90 via-[#060314]/95 to-[#04000C]/95 p-6 shadow-[0_20px_70px_rgba(1,1,21,0.55)] backdrop-blur-2xl md:p-10">
         <div className="grid gap-4 md:grid-cols-3">
-          {reasons.map((entry) => (
-            <article
-              key={entry.title}
-              className="rounded-[2rem] border border-white/15 bg-gradient-to-br from-white/10 via-transparent to-black/30 p-5 shadow-[0_15px_35px_rgba(2,0,23,0.45)]"
+          {capsules.map((capsule) => (
+            <Link
+              key={capsule.title}
+              href={capsule.href}
+              className="rounded-[2rem] border border-white/15 bg-gradient-to-br from-white/10 via-transparent to-black/30 p-5 shadow-[0_15px_35px_rgba(2,0,23,0.45)] transition hover:-translate-y-1 hover:border-white/40"
             >
-              <p className="text-[10px] uppercase tracking-[0.4em] text-white/60">Transition update</p>
-              <h2 className="pt-3 text-2xl font-semibold text-white">{entry.title}</h2>
-              <p className="pt-2 text-sm text-white/70">{entry.detail}</p>
-            </article>
+              <p className="text-[10px] uppercase tracking-[0.4em] text-white/60">{capsule.tag}</p>
+              <h2 className="pt-3 text-2xl font-semibold text-white">{capsule.title}</h2>
+              <p className="pt-2 text-sm text-white/70">{capsule.description}</p>
+              <span className="mt-4 inline-flex text-xs uppercase tracking-[0.3em] text-accent">View drop →</span>
+            </Link>
           ))}
-        </div>
-      </section>
-
-      <section
-        id="spring-embed"
-        className="soft-panel space-y-6 rounded-[3rem] border border-white/10 bg-gradient-to-br from-[#06030d] via-[#090320] to-[#05030c] p-8 shadow-[0_25px_70px_rgba(2,0,25,0.6)] backdrop-blur-2xl md:p-12"
-      >
-        <header className="space-y-3 text-white">
-          <p className="text-xs uppercase tracking-[0.35em] text-white/60">Live storefront</p>
-          <h2 className="text-3xl font-semibold">Shop the Spring carousel without leaving</h2>
-          <p className="text-sm text-white/70">
-            This embed is wired directly to our Spring store slug, so updates publish instantly. Prefer a full tab? Use the button
-            below to open store.groupseven.life in a new window.
-          </p>
-          <Link
-            href={storeUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex w-fit items-center justify-center rounded-full border border-white/25 px-6 py-2 text-xs uppercase tracking-[0.3em] text-white transition hover:border-white/60"
-          >
-            Open full storefront
-          </Link>
-        </header>
-        <div className="overflow-hidden rounded-3xl border border-white/10 bg-black/60 shadow-[0_20px_60px_rgba(1,0,22,0.65)]">
-          <iframe
-            title="Spring storefront embed"
-            src="https://embed.creator-spring.com/widget?slug=my-store-10d5eaa&per=20&currency=&page=1&layout=carousel-wide&theme=dark"
-            style={{ borderRadius: '24px', border: 'none', width: '100%', height: '420px' }}
-            allow="clipboard-write; encrypted-media"
-          />
         </div>
       </section>
 
       <section className="soft-panel rounded-[3rem] border border-white/10 bg-gradient-to-br from-[#130826]/95 via-[#09051A]/95 to-[#04000B]/97 p-8 shadow-[0_25px_80px_rgba(3,0,20,0.65)] backdrop-blur-2xl md:p-12">
         <div className="grid gap-8 md:grid-cols-2">
           <div className="space-y-4 text-white">
-            <p className="text-xs uppercase tracking-[0.35em] text-white/70">Commitments</p>
-            <h2 className="text-3xl font-semibold">How the new flow supports the mission</h2>
+            <p className="text-xs uppercase tracking-[0.35em] text-white/70">Why this store matters</p>
+            <h2 className="text-3xl font-semibold">Every collection powers people, not clicks</h2>
             <p className="text-sm text-white/70 md:text-base">
-              Spring runs checkout and fulfillment so we can keep shaping stories, music, and community tools. You still get fast
-              shipping while we focus on the experience.
+              Because the carousel pulls straight from Spring, we can swap colors, sizing, and SKU mixes instantly. That elasticity is how we
+              keep the lights on for community ops without outside investors.
             </p>
             <div className="space-y-4">
-              {commitments.map((line) => (
-                <article key={line} className="rounded-[1.5rem] border border-white/15 bg-white/5 p-4">
-                  <p className="text-sm text-white/70">{line}</p>
+              {fundingLoops.map((loop) => (
+                <article key={loop.title} className="rounded-[1.5rem] border border-white/15 bg-white/5 p-4">
+                  <p className="text-xs uppercase tracking-[0.35em] text-[#F5D663]">{loop.title}</p>
+                  <p className="pt-2 text-sm text-white/70">{loop.detail}</p>
                 </article>
               ))}
             </div>
           </div>
           <div className="flex flex-col gap-4 rounded-[2rem] border border-dashed border-white/25 bg-black/30 p-6 text-white">
-            <p className="text-xs uppercase tracking-[0.4em] text-white/60">Need something?</p>
+            <p className="text-xs uppercase tracking-[0.4em] text-white/60">Rally cries</p>
             <ul className="space-y-3 text-sm text-white/75 md:text-base">
-              <li className="rounded-xl border border-white/10 bg-white/5 px-4 py-3">Want a new item? Drop it in the community forum.</li>
-              <li className="rounded-xl border border-white/10 bg-white/5 px-4 py-3">Issue with an order? Use the Spring order lookup from your receipt.</li>
-              <li className="rounded-xl border border-white/10 bg-white/5 px-4 py-3">Building ideas? We&apos;re investing saved dev time into member tools.</li>
+              {rallyStatements.map((statement) => (
+                <li key={statement} className="rounded-xl border border-white/10 bg-white/5 px-4 py-3">
+                  {statement}
+                </li>
+              ))}
             </ul>
             <Link
               href="/community"
@@ -137,6 +124,41 @@ export default function ShopPage() {
               Tell us what to build next
             </Link>
           </div>
+        </div>
+      </section>
+
+      <section id="catalog" className="soft-panel space-y-6 rounded-[3rem] border border-white/10 bg-gradient-to-br from-[#06030d] via-[#090320] to-[#05030c] p-8 shadow-[0_25px_70px_rgba(2,0,25,0.6)] backdrop-blur-2xl md:p-12">
+        <header className="space-y-3 text-white">
+          <p className="text-xs uppercase tracking-[0.35em] text-white/60">Live catalog</p>
+          <h2 className="text-3xl font-semibold">Spring powers every drop</h2>
+          <p className="text-sm text-white/70">
+            Browse the live Spring carousel right here, then click through to complete your purchase on the Group Seven Life store. Inventory, pricing,
+            and fulfillment all sync straight from our Spring dashboard so what you see is what ships.
+          </p>
+        </header>
+        <div className="overflow-hidden rounded-[2.5rem] border border-white/15 bg-black/40 shadow-[0_22px_70px_rgba(3,0,18,0.55)]">
+          <iframe
+            title="Spring storefront embed"
+            src="https://embed.creator-spring.com/widget?slug=my-store-10d5eaa&per=20&currency=&page=1&layout=carousel-wide&theme=dark"
+            style={{ borderRadius: '24px', border: 'none', width: '100%', height: '420px' }}
+            allow="clipboard-write; encrypted-media"
+          />
+        </div>
+        <div className="flex flex-wrap gap-4 text-white">
+          <Link
+            href="https://store.groupseven.life"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center justify-center rounded-full bg-[#2FC7BB] px-6 py-3 text-xs font-semibold uppercase tracking-[0.35em] text-[#041218] shadow-[0_15px_40px_rgba(47,199,187,0.45)] transition hover:-translate-y-0.5"
+          >
+            Open the Group Seven Life store
+          </Link>
+          <Link
+            href="/community"
+            className="inline-flex items-center justify-center rounded-full border border-white/30 px-6 py-3 text-xs uppercase tracking-[0.35em] text-white transition hover:border-white/60"
+          >
+            Request a product drop
+          </Link>
         </div>
       </section>
     </div>

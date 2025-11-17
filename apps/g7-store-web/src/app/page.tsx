@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { Hero } from '../features/catalog/components/Hero';
-import { MerchSpotlight } from '../features/catalog/components/MerchSpotlight';
 import { MusicPlayer } from '../features/music/components/MusicPlayer';
 
 const whyWeBuild = [
@@ -62,7 +61,7 @@ const infrastructurePartners = [
   {
     name: 'Spring (Teespring)',
     tag: 'Storefront + fulfillment',
-    description: 'Hosting the external store at store.groupseven.life so payments stay smooth and merch ships quickly.',
+    description: 'Hosting the external shop on the Group Seven Life store so payments stay smooth and merch ships quickly.',
     initials: 'SP',
   },
   {
@@ -85,22 +84,22 @@ export default function Index() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(248,131,121,0.12),transparent_55%)]" />
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.04),transparent_60%)]" />
         </div>
-        <div className="relative z-10 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-          <div className="max-w-2xl space-y-3 text-white">
+        <div className="relative z-10 flex flex-col gap-6 text-white md:flex-row md:items-center md:justify-between">
+          <div className="space-y-4 md:max-w-2xl">
             <p className="text-xs uppercase tracking-[0.4em] text-white/70">Spring Storefront</p>
             <h2 className="text-[28px] font-semibold leading-tight md:text-[34px]">
-              Shop the Group 7 collection at store.groupseven.life
+              Refill your closet at the Group Seven Life store
             </h2>
             <p className="text-sm text-white/70 md:text-base">
-              All purchases now flow through our Spring-hosted store. Browse the shop page to preview the carousel, then complete your order securely on store.groupseven.life.
+              Browse every drop through the dedicated shop page, then head over to our Spring-powered storefront for checkout, fulfillment, and shipping updates.
             </p>
           </div>
-          <div className="flex flex-col gap-3 md:min-w-[320px] md:text-right">
+          <div className="flex flex-wrap gap-4 md:justify-end">
             <Link
               href="/shop"
               className="inline-flex items-center justify-center rounded-full bg-[#2FC7BB] px-6 py-3 text-xs font-semibold uppercase tracking-[0.35em] text-[#041218] shadow-[0_15px_40px_rgba(47,199,187,0.45)] transition hover:-translate-y-0.5"
             >
-              Preview the Shop Page
+              Preview the shop page
             </Link>
             <a
               href="https://store.groupseven.life"
@@ -108,7 +107,7 @@ export default function Index() {
               rel="noreferrer"
               className="inline-flex items-center justify-center rounded-full border border-white/30 px-6 py-3 text-xs uppercase tracking-[0.35em] text-white transition hover:border-white/60"
             >
-              Open store.groupseven.life
+              Shop the Group Seven Life store
             </a>
           </div>
         </div>
@@ -218,9 +217,6 @@ export default function Index() {
           ))}
         </div>
       </section>
-
-      <MerchSpotlight />
-
       <section className="soft-panel rounded-[3rem] border border-white/15 bg-gradient-to-br from-[#201c44]/95 via-[#09061C]/97 to-[#05000D]/97 p-8 text-center shadow-[0_30px_80px_rgba(3,0,20,0.75)] backdrop-blur-2xl md:p-14">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[conic-gradient(from_120deg,_rgba(47,199,187,0.05),_rgba(248,131,121,0.08),_transparent_60%)]" />

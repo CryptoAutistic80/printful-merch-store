@@ -10,10 +10,10 @@ export function MerchSpotlight() {
     <section className="soft-panel space-y-8 rounded-[2.5rem] border border-white/5 bg-gradient-to-br from-[#06030d] via-[#090320] to-[#05030c] p-8 md:p-12">
       <div className="space-y-3">
         <p className="text-xs uppercase tracking-[0.35em] text-white/50">Orientation kit</p>
-        <h2 className="text-3xl font-semibold text-white">Spring storefront merch spotlight</h2>
+        <h2 className="text-3xl font-semibold text-white">Printful-ready merch spotlight</h2>
         <p className="text-base text-white/70">
-          Featured products still pull from the shared catalog so the storytelling stays consistent, but checkout now happens on
-          Spring. Update a SKU and the embed reflects it immediately.
+          Featured products pull directly from the shared Printful data layer. Slot in fresh SKUs and the hero stack updates without touching
+          layout code.
         </p>
       </div>
       <div className="grid gap-6 md:grid-cols-3">
@@ -37,7 +37,7 @@ export function MerchSpotlight() {
               <p className="text-sm text-white/70">{product.description}</p>
               <div className="flex items-center justify-between text-sm text-white/60">
                 <span>{formatCurrency(product.basePrice)}</span>
-                <span>{product.variants.length} Spring-ready variants</span>
+                <span>{product.variants.length} Printful variants</span>
               </div>
             </div>
             <div className="mt-auto flex gap-3 pt-4">
@@ -58,10 +58,7 @@ export function MerchSpotlight() {
         ))}
       </div>
       <div className="flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-dashed border-white/20 px-6 py-4 text-sm text-white/70">
-        <p>
-          Need to swap items? Update <code className="rounded bg-black/40 px-2 py-0.5 text-white/80">libs/shared-products</code>
-          and every page stays in sync.
-        </p>
+        <p>Need to swap items? Update <code className="rounded bg-black/40 px-2 py-0.5 text-white/80">libs/shared-products</code> and every page stays in sync.</p>
         <Link href="/shop" className="text-xs uppercase tracking-[0.35em] text-accent transition hover:text-white">
           Browse full catalog →
         </Link>

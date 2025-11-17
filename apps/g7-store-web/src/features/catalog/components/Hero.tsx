@@ -22,7 +22,8 @@ export function Hero() {
             <h1
               className={`${glitch.className} text-[34px] leading-tight bg-gradient-to-r from-[#F3EEFF] via-[#D9C6EA] to-[#99EFE4] bg-[length:200%_200%] bg-clip-text text-transparent animate-[textGradientShift_6s_ease_infinite] md:text-[48px]`}
             >
-              Welcome to group 7 life - building the foundations
+              <span className="block">GROUP 7 LIFE</span>
+              <span className="block pt-4 text-[28px] md:text-[40px]">building foundations</span>
             </h1>
             <p className="text-base text-white/80 md:text-lg">
               Everywhere online we hear the same thing: people are done being pushed into algorithmic echo chambers. They crave something different—spaces that feel human, connective, loving. That&apos;s why every piece of Group 7 merch matters. Each tee, hoodie, or sticker is fuel for a social media future built on real community infrastructure, not clicks. If you believe in launching a platform that treats people like people, this is how you help build it.

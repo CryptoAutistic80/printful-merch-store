@@ -44,9 +44,7 @@ export interface CheckoutSessionPayload {
 }
 
 export interface CheckoutSessionResult {
-  externalStoreUrl: string;
-  message: string;
-  receivedCart?: CartItem[];
+  url: string;
 }
 
 export type OrderStatus = 'pending' | 'paid' | 'fulfilled' | 'errored';

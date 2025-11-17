@@ -10,7 +10,7 @@ const mono = IBM_Plex_Mono({ subsets: ['latin'], weight: ['400', '500'], variabl
 
 export const metadata: Metadata = {
   title: 'Group 7 Life',
-  description: 'Spring-hosted merch hub with Nx, Next.js, and Nest powering the community side.',
+  description: 'Printful-powered merch stack built with Nx, Next.js, and Nest.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

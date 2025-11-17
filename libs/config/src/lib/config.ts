@@ -3,7 +3,9 @@ import { z } from 'zod';
 const envSchema = z.object({
   NODE_ENV: z.enum(['development', 'test', 'production']).default('development'),
   PORT: z.coerce.number().default(3333),
-  STORE_URL: z.string().default('https://store.groupseven.life'),
+  STRIPE_SECRET_KEY: z.string().optional(),
+  STRIPE_WEBHOOK_SECRET: z.string().optional(),
+  PRINTFUL_API_TOKEN: z.string().optional(),
   APP_BASE_URL: z.string().default('http://localhost:4200'),
   API_BASE_URL: z.string().default('http://localhost:3333/api'),
 });
@@ -17,6 +19,5 @@ export function loadEnvConfig(values: NodeJS.ProcessEnv = process.env): AppEnvCo
 export function getPublicRuntimeConfig(env: AppEnvConfig) {
   return {
     NEXT_PUBLIC_API_BASE_URL: env.API_BASE_URL,
-    NEXT_PUBLIC_STORE_URL: env.STORE_URL,
   } as const;
 }

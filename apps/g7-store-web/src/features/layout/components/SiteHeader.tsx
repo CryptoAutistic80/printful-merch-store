@@ -3,8 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { cn } from '@g7/core/utils';
-
-const storeUrl = process.env.NEXT_PUBLIC_STORE_URL ?? 'https://store.groupseven.life';
+import { useCart } from '../../cart/hooks/useCart';
 
 const navItems = [
   { href: '/', label: 'Home' },
@@ -16,6 +15,7 @@ const navItems = [
 
 export function SiteHeader() {
   const pathname = usePathname();
+  const { totalQuantity } = useCart();
 
   return (
     <header className="sticky top-0 z-40 border-b border-white/5 bg-ink/90 backdrop-blur">
@@ -38,12 +38,10 @@ export function SiteHeader() {
           ))}
         </nav>
         <Link
-          href={storeUrl}
-          target="_blank"
-          rel="noreferrer"
-          className="rounded-full border border-white/20 bg-white/5 px-4 py-2 text-xs font-semibold tracking-wide text-white hover:border-white/50"
+          href="/cart"
+          className="rounded-full border border-white/20 bg-white/5 px-4 py-2 text-xs font-semibold tracking-wide text-white"
         >
-          Visit store
+          Cart ({totalQuantity})
         </Link>
       </div>
     </header>
